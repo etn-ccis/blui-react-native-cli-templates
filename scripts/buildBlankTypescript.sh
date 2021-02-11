@@ -23,7 +23,6 @@ if [ ! -d ./assets/images ];
     then cd ./assets && mkdir images;
 fi;
 
-cp templates/blank-typescript/template/pxblue-logo.png ./assets/images
 cp templates/blank-typescript/template/Logo.svg ./assets/images
 echo -e "${GRAY}Complete${NC}\r\n"
 

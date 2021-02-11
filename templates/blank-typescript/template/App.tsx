@@ -16,7 +16,7 @@ import * as PXBThemes from '@pxblue/react-native-themes';
 import { Body1, wrapIcon, Header, H4 } from '@pxblue/react-native-components';
 import { Theme } from 'react-native-paper/lib/typescript/types';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
-// import Logo from './assets/images/Logo.svg';
+import Logo from './assets/images/Logo.svg';
 
 const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
 
@@ -117,10 +117,9 @@ const App = (): JSX.Element => {
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView>
                     <View style={defaultStyles.pxbLogoWrapper}>
-                        <Animated.Image
-                            style={[defaultStyles.pxbLogo, { transform: [{ rotate: spin }] }]}
-                            source={require('./assets/images/pxblue-logo.png')}
-                        />
+                        <Animated.View style={[defaultStyles.pxbLogo, { transform: [{ rotate: spin }] }]}>
+                            <Logo height={100} width={100} fill={'#007bc1'} />
+                        </Animated.View>
                     </View>
                     <H4 style={defaultStyles.title}>
                         Welcome to PX <H4 color={'primary'}>Blue</H4>.
