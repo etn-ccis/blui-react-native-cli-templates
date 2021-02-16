@@ -1,0 +1,65 @@
+# Dependencies
+**/**/node_modules
+**/**/package-lock.json
+**/**/npm-debug.log*
+**/**/yarn-error.log*
+**/**/*.log
+**/**/*.tmp
+**/**/*.tmp.*
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/build
+
+## Ionic
+.idea/
+.ionic/
+resources/ios/icon
+resources/ios/splash
+resources/android/icon
+resources/android/splash
+.sourcemaps/
+.sass-cache/
+.tmp/
+.versions/
+coverage/
+www/
+tmp/
+temp/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
+$RECYCLE.BIN/
+
+## React Native
+.expo/*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+web-build/
+web-report/
+
+# Testing
+/coverage
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+**/**/.DS_Store
+**/**/Thumbs.db
+
+# Local Environment Config
+**/**/.env.local
+**/**/.env.development.local
+**/**/.env.test.local
+**/**/.env.production.local
+**/**./.eslintcache
