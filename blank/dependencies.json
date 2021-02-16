@@ -3,6 +3,7 @@
     "@pxblue/react-native-themes@^5.0.0",
     "@pxblue/colors@^3.0.0",
     "@pxblue/react-native-components@^4.1.0",
+    "react-native-modal@^11.6.1",
     "react-native-paper@^4.2.0",
     "@pxblue/icons-svg@^1.1.1",
     "react-native-vector-icons@^7.1.0",
