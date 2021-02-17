@@ -12,6 +12,7 @@ jobs:
             - run:
                   name: Install dependencies
                   command: |
+                      cd demo
                       yarn install
             - save_cache:
                   paths:
@@ -20,10 +21,13 @@ jobs:
             - run:
                   name: Prettier Check
                   command: |
+                      cd demo
                       yarn prettier:check
             - run:
                   name: Lint
-                  command: yarn lint
+                  command: |
+                      cd demo
+                      yarn lint
     # publish:
     #     docker:
     #       - image: circleci/node:12.9.1-browsers
