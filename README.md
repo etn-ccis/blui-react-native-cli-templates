@@ -1,4 +1,4 @@
-# react-native-cli-templates
+# React Native Cli Templates
 
 These are project templates that are used by the PX Blue CLI when starting a new PX Blue project. They are used behind the scenes by the PX Blue CLI.
 
@@ -20,5 +20,5 @@ The Blank template provides a bare-bones application with PX Blue components and
 You can use this template with the PX Blue CLI (recommended):
 
 ```sh
-npx -p @pxblue/cli pxb new react-native cli=rnc --template=blank
+npx -p @pxblue/cli pxb new react-native --cli=rnc --template=blank
 ```
