@@ -12,6 +12,14 @@ if [ -f ./App.tsx ];
     then rm App.tsx;
 fi;
 
+if [ -d ./pages ];
+    then rm -rf pages;
+fi;
+
+if [ -d ./router ];
+    then rm -rf router;
+fi;
+
 echo -e "${BLUE}Copying Project Files${NC}"
 cp ../blank/template/App.js ./
 
