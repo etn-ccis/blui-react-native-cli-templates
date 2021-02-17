@@ -13,7 +13,7 @@ if [ -f ./App.tsx ];
 fi;
 
 echo -e "${BLUE}Copying Project Files${NC}"
-cp blank-typescript/template/App.tsx ./
+cp ../blank-typescript/template/App.tsx ./
 
 if [ ! -d ./assets ];
     then mkdir assets;
@@ -23,6 +23,6 @@ if [ ! -d ./assets/images ];
     then cd ./assets && mkdir images;
 fi;
 
-cp blank-typescript/images/Logo.svg ./assets/images
+cp ../blank-typescript/images/Logo.svg ./assets/images
 echo -e "${GRAY}Complete${NC}\r\n"
 

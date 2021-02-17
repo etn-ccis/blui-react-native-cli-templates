@@ -13,12 +13,9 @@ import {
 } from 'react-native';
 import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
 import * as PXBThemes from '@pxblue/react-native-themes';
-import { Body1, wrapIcon, Header, H4 } from '@pxblue/react-native-components';
+import { Body1, Header, H4 } from '@pxblue/react-native-components';
 import { Theme } from 'react-native-paper/lib/typescript/types';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import Logo from './assets/images/Logo.svg';
-
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
 
 const styles = (
     theme: Theme
@@ -105,15 +102,7 @@ const App = (): JSX.Element => {
 
     return (
         <ThemeProvider theme={PXBThemes.blue}>
-            <Header
-                title={'PX Blue React Native'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: (): void => {
-                        // do nothing
-                    },
-                }}
-            />
+            <Header title={'PX Blue React Native'} />
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView>
                     <View style={defaultStyles.pxbLogoWrapper}>
