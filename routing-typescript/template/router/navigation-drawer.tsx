@@ -33,7 +33,7 @@ export type NavDrawerProps = {
 };
 
 export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
-    const [selected, setSelected] = useState('');
+    const [selected, setSelected] = useState('Home');
     const selectItem = useCallback(
         (id) => {
             navigation.navigate(id);

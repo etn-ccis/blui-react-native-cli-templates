@@ -1,6 +1,6 @@
 {
-    "name": "@pxblue/react-native-template-blank-typescript",
-    "version": "1.0.0",
+    "name": "@pxblue/react-native-template-routing-typescript",
+    "version": "1.0.0-alpha.0",
     "keywords": [
         "react native",
         "template",

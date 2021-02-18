@@ -9,9 +9,13 @@ const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
 
 const styles = (): StyleSheet.NamedStyles<{
     content: ViewStyle;
+    scrollViewContent: ViewStyle;
 }> =>
     StyleSheet.create({
         content: {
+            flex: 1,
+        },
+        scrollViewContent: {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
@@ -37,7 +41,7 @@ const PageTwo: React.FC<AppProps> = ({ navigation }): JSX.Element => {
                 }}
             />
             <SafeAreaView style={defaultStyles.content}>
-                <ScrollView>
+                <ScrollView contentContainerStyle={defaultStyles.scrollViewContent}>
                     <EmptyState
                         IconClass={Event}
                         title={'Coming Soon'}
