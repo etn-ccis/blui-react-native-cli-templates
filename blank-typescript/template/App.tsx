@@ -114,7 +114,7 @@ const App = (): JSX.Element => {
                         Welcome to PX <H4 color={'primary'}>Blue</H4>.
                     </H4>
                     <Body1 style={defaultStyles.subtitle}>
-                        Edit <Body1 style={defaultStyles.bold}>App.jsx</Body1> and save to reload.
+                        Edit <Body1 style={defaultStyles.bold}>App.tsx</Body1> and save to reload.
                     </Body1>
                     <Divider style={defaultStyles.divider} />
                     <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />
