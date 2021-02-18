@@ -1,4 +1,4 @@
-# React Native Cli Templates
+# React Native CLI Templates
 
 These are project templates that are used by the PX Blue CLI when starting a new PX Blue project. They are used behind the scenes by the PX Blue CLI.
 
