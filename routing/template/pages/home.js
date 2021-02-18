@@ -1,13 +1,5 @@
 import React, { useCallback } from 'react';
-import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Linking,
-    View,
-    Animated,
-    Easing,
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
 import { Button, Divider, useTheme } from 'react-native-paper';
 import { Body1, H4, Header, wrapIcon } from '@pxblue/react-native-components';
 import Logo from '../assets/images/Logo.svg';
@@ -58,11 +50,7 @@ const OpenURLButton = (props) => {
     }, [url]);
 
     return (
-        <Button
-            onPress={() => handlePress()}
-            labelStyle={defaultStyles.openURLButtonText}
-            uppercase={false}
-        >
+        <Button onPress={() => handlePress()} labelStyle={defaultStyles.openURLButtonText} uppercase={false}>
             {title}
         </Button>
     );

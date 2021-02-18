@@ -17,7 +17,6 @@ const styles = () =>
         },
     });
 
-
 const PageTwo = ({ navigation }) => {
     const defaultStyles = styles();
 
