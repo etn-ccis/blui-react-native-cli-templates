@@ -17,5 +17,5 @@ Projects created using this template will start out with the following file stru
 
 ```
 └── root
-└── App.jsx                             // a sample landing page
+└── App.tsx                             // a sample landing page
 ```

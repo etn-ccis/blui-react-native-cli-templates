@@ -4,31 +4,18 @@ import {
     ScrollView,
     StyleSheet,
     Linking,
-    TextStyle,
-    ViewStyle,
-    ImageStyle,
     View,
     Animated,
     Easing,
 } from 'react-native';
-import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
-import * as PXBThemes from '@pxblue/react-native-themes';
-import { Body1, Header, H4 } from '@pxblue/react-native-components';
-import { Theme } from 'react-native-paper/lib/typescript/types';
-import Logo from './assets/images/Logo.svg';
+import { Button, Divider, useTheme } from 'react-native-paper';
+import { Body1, H4, Header, wrapIcon } from '@pxblue/react-native-components';
+import Logo from '../assets/images/Logo.svg';
+import MatIcon from 'react-native-vector-icons/MaterialIcons';
 
-const styles = (
-    theme: Theme
-): StyleSheet.NamedStyles<{
-    content: ViewStyle;
-    pxbLogoWrapper: ViewStyle;
-    pxbLogo: Animated.WithAnimatedValue<ImageStyle>; // @TODO: Verify this type
-    title: TextStyle;
-    subtitle: TextStyle;
-    bold: TextStyle;
-    divider: ViewStyle;
-    openURLButtonText: TextStyle;
-}> =>
+const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
+
+const styles = (theme) =>
     StyleSheet.create({
         content: {
             flex: 1,
@@ -61,7 +48,7 @@ const styles = (
         },
     });
 
-const OpenURLButton = (props: any): JSX.Element => {
+const OpenURLButton = (props) => {
     const { url, title } = props;
     const theme = useTheme();
     const defaultStyles = styles(theme);
@@ -72,7 +59,7 @@ const OpenURLButton = (props: any): JSX.Element => {
 
     return (
         <Button
-            onPress={(): Promise<void> => handlePress()}
+            onPress={() => handlePress()}
             labelStyle={defaultStyles.openURLButtonText}
             uppercase={false}
         >
@@ -81,7 +68,7 @@ const OpenURLButton = (props: any): JSX.Element => {
     );
 };
 
-const App = (): JSX.Element => {
+const Home = ({ navigation }) => {
     const theme = useTheme();
     const defaultStyles = styles(theme);
     const spinValue = new Animated.Value(0);
@@ -101,8 +88,16 @@ const App = (): JSX.Element => {
     });
 
     return (
-        <ThemeProvider theme={PXBThemes.blue}>
-            <Header title={'PX Blue React Native'} />
+        <>
+            <Header
+                title={'PX Blue React Native'}
+                navigation={{
+                    icon: MenuIcon,
+                    onPress: () => {
+                        navigation.openDrawer();
+                    },
+                }}
+            />
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView>
                     <View style={defaultStyles.pxbLogoWrapper}>
@@ -114,7 +109,7 @@ const App = (): JSX.Element => {
                         Welcome to PX <H4 color={'primary'}>Blue</H4>.
                     </H4>
                     <Body1 style={defaultStyles.subtitle}>
-                        Edit <Body1 style={defaultStyles.bold}>App.tsx</Body1> and save to reload.
+                        Edit <Body1 style={defaultStyles.bold}>App.jsx</Body1> and save to reload.
                     </Body1>
                     <Divider style={defaultStyles.divider} />
                     <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />
@@ -139,8 +134,8 @@ const App = (): JSX.Element => {
                     />
                 </ScrollView>
             </SafeAreaView>
-        </ThemeProvider>
+        </>
     );
 };
 
-export default App;
+export default Home;

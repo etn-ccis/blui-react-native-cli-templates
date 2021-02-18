@@ -1,6 +1,6 @@
-# Routing Template (TypeScript)
+# Routing Template (JavaScript)
 
-![npm (scoped)](https://img.shields.io/npm/v/@pxblue/react-native-template-routing-typescript?color=%23007bc1&label=%40pxblue%2Freact-native-template-routing-typescript)
+![npm (scoped)](https://img.shields.io/npm/v/@pxblue/react-native-template-routing?color=%23007bc1&label=%40pxblue%2Freact-native-template-routing)
 
 This is an official PX Blue template used internally by the [PX Blue CLI](https://www.npmjs.com/package/@pxblue/cli).
 
@@ -9,7 +9,7 @@ This template includes the installation and initial setup of routing using [Reac
 ## Usage
 This template can be used with the PX Blue CLI:
 ```sh
-npx -p @pxblue/cli pxb new react-native --name=myapp --cli=rnc --language=ts --template=routing
+npx -p @pxblue/cli pxb new react-native --name=myapp --cli=rnc --language=js --template=routing
 ```
 
 ## Project Structure
@@ -17,9 +17,9 @@ Projects created using this template will start out with the following file stru
 
 ```
 └── root
-└── App.tsx                            // app entry point
-└── pages                              // sample application pages
+└── App.js                            // app entry point
+└── pages                             // sample application pages
 └── router                             
-    |-- index.tsx                      // sets up routing
-    └── navigation-drawer.tsx          // sets up Drawer
+    |-- index.js                      // sets up routing
+    └── navigation-drawer.js          // sets up Drawer
 ```
