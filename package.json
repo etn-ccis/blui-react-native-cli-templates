@@ -1,0 +1,65 @@
+{
+    "name": "react-native-cli-templates",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "android": "react-native run-android",
+        "ios": "react-native run-ios",
+        "start": "react-native start",
+        "test": "jest",
+        "lint": "eslint \"**/**.{ts,tsx}\"",
+        "lint:fix": "eslint \"**/**.{ts,tsx}\" --fix",
+        "prettier": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
+        "prettier:check": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check",
+        "rnlink": "npx react-native link",
+        "start:blank-ios": "cd demo && yarn start:blank-ios",
+        "start:blank-android": "cd demo && yarn start:blank-android",
+        "start:blank-typescript-ios": "cd demo && yarn start:blank-typescript-ios",
+        "start:blank-typescript-android": "cd demo && yarn start:blank-typescript-android",
+        "start:routing-ios": "cd demo && yarn start:routing-ios",
+        "start:routing-android": "cd demo && yarn start:routing-android",
+        "start:routing-typescript-ios": "cd demo && yarn start:routing-typescript-ios",
+        "start:routing-typescript-android": "cd demo && yarn start:routing-typescript-android",
+        "start:authentication-ios": "cd demo && yarn start:authentication-ios",
+        "start:authentication-android": "cd demo && yarn start:authentication-android",
+        "start:authentication-typescript-ios": "cd demo && yarn start:authentication-typescript-ios",
+        "start:authentication-typescript-android": "cd demo && yarn start:authentication-typescript-android"
+    },
+    "dependencies": {
+        "react": "16.13.1",
+        "react-native": "0.63.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "@babel/runtime": "^7.8.4",
+        "@pxblue/eslint-config": "^2.0.2",
+        "@pxblue/prettier-config": "^1.0.2",
+        "@react-native-community/eslint-config": "^1.1.0",
+        "@types/jest": "^25.2.3",
+        "@types/react-native": "^0.63.2",
+        "@types/react-native-vector-icons": "^6.4.6",
+        "@types/react-test-renderer": "^16.9.2",
+        "@typescript-eslint/eslint-plugin": "^4.5.0",
+        "@typescript-eslint/parser": "^4.5.0",
+        "babel-jest": "^25.1.0",
+        "eslint": "^7.11.0",
+        "eslint-config-prettier": "^6.13.0",
+        "eslint-plugin-react": "^7.0.0",
+        "jest": "^26.6.3",
+        "metro-react-native-babel-preset": "^0.59.0",
+        "react-test-renderer": "^17.0.1",
+        "typescript": "^3.8.3"
+    },
+    "jest": {
+        "preset": "react-native",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    },
+    "prettier": "@pxblue/prettier-config"
+}

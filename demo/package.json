@@ -1,6 +1,6 @@
 {
-    "name": "react-native-cli-templates",
-    "version": "0.0.1",
+    "name": "react-native-cli-templates-demo",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "android": "react-native run-android",

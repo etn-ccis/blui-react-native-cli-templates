@@ -8,25 +8,22 @@ jobs:
             - checkout
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "demo/package.json" }}
+                      - v1-dependencies-{{ checksum "package.json" }}
             - run:
                   name: Install dependencies
                   command: |
-                      cd demo
                       yarn install
             - save_cache:
                   paths:
                       - node_modules
-                  key: v1-dependencies-{{ checksum "demo/package.json" }}
+                  key: v1-dependencies-{{ checksum "package.json" }}
             - run:
                   name: Prettier Check
                   command: |
-                      cd demo
                       yarn prettier:check
             - run:
                   name: Lint
                   command: |
-                      cd demo
                       yarn lint
     # publish:
     #     docker:
