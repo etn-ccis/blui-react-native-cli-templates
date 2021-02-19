@@ -16,10 +16,12 @@ npx -p @pxblue/cli pxb new react-native --name=myapp --cli=rnc --language=ts --t
 Projects created using this template will start out with the following file structure:
 
 ```
-└── root
-└── App.tsx                            // app entry point
-└── pages                              // sample application pages
-└── router                             
-    |-- index.tsx                      // sets up routing
-    └── navigation-drawer.tsx          // sets up Drawer
+|── /ios                              // ios project folder
+|── /android                          // android project folder
+|── /assets                           // fonts and images used by the application
+|── App.tsx                           // app entry point
+|── /pages                             // sample application pages
+└── /router                             
+    |── index.tsx                     // sets up routing
+    └── navigation-drawer.tsx         // sets up Drawer
 ```
