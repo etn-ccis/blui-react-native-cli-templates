@@ -13,14 +13,16 @@ The Routing template provides all of the essential PX Blue configuration as well
 |                | placeholder landing page | navigation drawer & routing  | login & registration screens  |
 | -------------- | -- | -- | -- |
 | Blank          | ✅ |    |    |
-| Blank          | ✅ | ✅ |    |
+| Routing        | ✅ | ✅ |    |
 
 
 ## Screenshots
 ##### Blank Template
 ![Blank Template](./images/blank-typescript-ios.png)
-##### Routing Template
+##### Routing Template With Collapsed Drawer
 ![Routing Template](./images/routing-typescript-ios.png)
+##### Routing Template With Expanded Drawer
+![Routing Template](./images/routing-typescript-ios-expanded-drawer.png)
 
 ## Usage
 You can use these templates with the PX Blue CLI (recommended):

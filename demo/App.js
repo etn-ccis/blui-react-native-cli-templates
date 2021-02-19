@@ -1,37 +1,11 @@
 import React, { useCallback } from 'react';
-import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Linking,
-    TextStyle,
-    ViewStyle,
-    View,
-    Animated,
-    Easing,
-} from 'react-native';
-import { Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, wrapIcon } from '@pxblue/react-native-components';
-import { Theme } from 'react-native-paper/lib/typescript/types';
-import Logo from '../assets/images/Logo.svg';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../router';
+import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
+import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
+import * as PXBThemes from '@pxblue/react-native-themes';
+import { Body1, Header, H4 } from '@pxblue/react-native-components';
+import Logo from './assets/images/Logo.svg';
 
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
-
-const styles = (
-    theme: Theme
-): StyleSheet.NamedStyles<{
-    content: ViewStyle;
-    pxbLogoWrapper: ViewStyle;
-    pxbLogo: ViewStyle;
-    title: TextStyle;
-    subtitle: TextStyle;
-    bold: TextStyle;
-    divider: ViewStyle;
-    openURLButtonText: TextStyle;
-}> =>
+const styles = (theme) =>
     StyleSheet.create({
         content: {
             flex: 1,
@@ -64,7 +38,7 @@ const styles = (
         },
     });
 
-const OpenURLButton = (props: any): JSX.Element => {
+const OpenURLButton = (props) => {
     const { url, title } = props;
     const theme = useTheme();
     const defaultStyles = styles(theme);
@@ -74,21 +48,13 @@ const OpenURLButton = (props: any): JSX.Element => {
     }, [url]);
 
     return (
-        <Button
-            onPress={(): Promise<void> => handlePress()}
-            labelStyle={defaultStyles.openURLButtonText}
-            uppercase={false}
-        >
+        <Button onPress={() => handlePress()} labelStyle={defaultStyles.openURLButtonText} uppercase={false}>
             {title}
         </Button>
     );
 };
 
-type AppProps = {
-    navigation: StackNavigationProp<RootStackParamList, 'Home'>;
-};
-
-const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
+const App = () => {
     const theme = useTheme();
     const defaultStyles = styles(theme);
     const spinValue = new Animated.Value(0);
@@ -108,16 +74,8 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
     });
 
     return (
-        <>
-            <Header
-                title={'Home Page'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: (): void => {
-                        navigation.openDrawer();
-                    },
-                }}
-            />
+        <ThemeProvider theme={PXBThemes.blue}>
+            <Header title={'PX Blue React Native'} />
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView>
                     <View style={defaultStyles.pxbLogoWrapper}>
@@ -129,7 +87,7 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
                         Welcome to PX <H4 color={'primary'}>Blue</H4>.
                     </H4>
                     <Body1 style={defaultStyles.subtitle}>
-                        Edit <Body1 style={defaultStyles.bold}>pages/home.tsx</Body1> and save to reload.
+                        Edit <Body1 style={defaultStyles.bold}>App.js</Body1> and save to reload.
                     </Body1>
                     <Divider style={defaultStyles.divider} />
                     <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />
@@ -154,8 +112,8 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
                     />
                 </ScrollView>
             </SafeAreaView>
-        </>
+        </ThemeProvider>
     );
 };
 
-export default Home;
+export default App;

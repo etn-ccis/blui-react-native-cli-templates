@@ -23,7 +23,8 @@
         "start:authentication-ios": "bash ./scripts/buildAuthentication.sh && yarn && bash ./scripts/installPods.sh && react-native run-ios",
         "start:authentication-android": "bash ./scripts/buildAuthentication.sh && yarn && react-native run-android",
         "start:authentication-typescript-ios": "bash ./scripts/buildAuthenticationTypescript.sh && yarn && bash ./scripts/installPods.sh && react-native run-ios",
-        "start:authentication-typescript-android": "bash ./scripts/buildAuthenticationTypescript.sh && yarn && react-native run-android"
+        "start:authentication-typescript-android": "bash ./scripts/buildAuthenticationTypescript.sh && yarn && react-native run-android",
+        "precommit": "bash ./scripts/buildBlank.sh"
     },
     "dependencies": {
         "@pxblue/colors": "^3.0.0",

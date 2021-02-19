@@ -23,7 +23,8 @@
         "start:authentication-ios": "cd demo && yarn start:authentication-ios",
         "start:authentication-android": "cd demo && yarn start:authentication-android",
         "start:authentication-typescript-ios": "cd demo && yarn start:authentication-typescript-ios",
-        "start:authentication-typescript-android": "cd demo && yarn start:authentication-typescript-android"
+        "start:authentication-typescript-android": "cd demo && yarn start:authentication-typescript-android",
+        "precommit": "cd demo && yarn prettier && yarn precommit"
     },
     "dependencies": {
         "react": "16.13.1"
