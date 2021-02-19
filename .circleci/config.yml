@@ -1,0 +1,71 @@
+version: 2
+jobs:
+    build_project:
+        docker:
+            - image: circleci/node:12.9.1-browsers
+        working_directory: ~/react-native-cli-templates
+        steps:
+            - checkout
+            - restore_cache:
+                  keys:
+                      - v1-dependencies-{{ checksum "package.json" }}
+            - run:
+                  name: Install dependencies
+                  command: |
+                      yarn install
+            - save_cache:
+                  paths:
+                      - node_modules
+                  key: v1-dependencies-{{ checksum "package.json" }}
+            - run:
+                  name: Prettier Check
+                  command: |
+                      yarn prettier:check
+            - run:
+                  name: Lint
+                  command: |
+                      yarn lint
+    publish:
+        docker:
+          - image: circleci/node:12.9.1-browsers
+        steps:
+            - checkout
+            - run:
+                name: Authenticate with registry
+                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+            - run:
+                name: Publish @pxblue/react-native-template-blank
+                command:  |
+                  cd blank
+                  MASTER_VERSION=`node -p "require('./package.json').version"`
+                  NPM_LATEST_VERSION=`npm show @pxblue/react-native-template-blank version`
+                  if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
+                  then
+                      npm publish
+                  else
+                      echo "Latest version is already published."
+                  fi
+            - run:
+                name: Publish @pxblue/react-native-template-blank-typescript
+                command:   |
+                  cd blank-typescript
+                  MASTER_VERSION=`node -p "require('./package.json').version"`
+                  NPM_LATEST_VERSION=`npm show @pxblue/react-native-template-blank-typescript version`
+                  if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
+                  then
+                      npm publish
+                  else
+                      echo "Latest version is already published."
+                  fi
+workflows:
+    version: 2
+    react-native-cli-templates:
+        jobs:
+            - build_project
+            - publish:
+                requires:
+                    - build_project
+                filters:
+                    branches:
+                        only:
+                            - master
