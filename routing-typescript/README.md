@@ -20,7 +20,7 @@ Projects created using this template will start out with the following file stru
 |── /android                          // android project folder
 |── /assets                           // fonts and images used by the application
 |── App.tsx                           // app entry point
-|── /pages                             // sample application pages
+|── /pages                            // sample application pages
 └── /router                             
     |── index.tsx                     // sets up routing
     └── navigation-drawer.tsx         // sets up Drawer

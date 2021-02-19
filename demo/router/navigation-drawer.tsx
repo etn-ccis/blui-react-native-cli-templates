@@ -1,14 +1,16 @@
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, wrapIcon } from '@pxblue/react-native-components';
+import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem, wrapIcon } from '@pxblue/react-native-components';
 import React, { useState, useCallback } from 'react';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { IconButton } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from './index';
 
 const Home = wrapIcon({ IconClass: MatIcon, name: 'home', flip: false });
 const LooksOne = wrapIcon({ IconClass: MatIcon, name: 'looks-one', flip: false });
 const LooksTwo = wrapIcon({ IconClass: MatIcon, name: 'looks-two', flip: false });
 
-export const navGroupItems = [
+export const navGroupItems: NavItem[] = [
     {
         title: 'Home Page',
         itemID: 'Home',
@@ -26,7 +28,11 @@ export const navGroupItems = [
     },
 ];
 
-export const NavigationDrawer = ({ navigation }) => {
+export type NavDrawerProps = {
+    navigation: StackNavigationProp<RootStackParamList, 'NavigationDrawer'>;
+};
+
+export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     const [selected, setSelected] = useState('Home');
     const selectItem = useCallback(
         (id) => {
@@ -37,7 +43,7 @@ export const NavigationDrawer = ({ navigation }) => {
     );
 
     return (
-        <Drawer activeItem={selected} onItemSelect={(id) => selectItem(id)}>
+        <Drawer activeItem={selected} onItemSelect={(id: string): void => selectItem(id)}>
             <DrawerHeader
                 title={'PX Blue'}
                 subtitle={'React Native Project'}
@@ -47,7 +53,7 @@ export const NavigationDrawer = ({ navigation }) => {
                         icon="menu"
                         size={24}
                         color={Colors.white[50]}
-                        onPress={() => {
+                        onPress={(): void => {
                             navigation.closeDrawer();
                         }}
                     />

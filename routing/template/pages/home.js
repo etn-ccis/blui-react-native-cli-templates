@@ -78,7 +78,7 @@ const Home = ({ navigation }) => {
     return (
         <>
             <Header
-                title={'PX Blue React Native'}
+                title={'Home Page'}
                 navigation={{
                     icon: MenuIcon,
                     onPress: () => {

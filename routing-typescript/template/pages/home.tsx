@@ -110,7 +110,7 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
     return (
         <>
             <Header
-                title={'PX Blue React Native'}
+                title={'Home Page'}
                 navigation={{
                     icon: MenuIcon,
                     onPress: (): void => {
