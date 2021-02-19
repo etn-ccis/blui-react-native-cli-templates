@@ -6,7 +6,6 @@ import {
     Linking,
     TextStyle,
     ViewStyle,
-    ImageStyle,
     View,
     Animated,
     Easing,
@@ -22,7 +21,7 @@ const styles = (
 ): StyleSheet.NamedStyles<{
     content: ViewStyle;
     pxbLogoWrapper: ViewStyle;
-    pxbLogo: Animated.WithAnimatedValue<ImageStyle>; // @TODO: Verify this type
+    pxbLogo: ViewStyle;
     title: TextStyle;
     subtitle: TextStyle;
     bold: TextStyle;

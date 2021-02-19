@@ -16,6 +16,8 @@ npx -p @pxblue/cli pxb new react-native --name=myapp --cli=rnc --language=js --t
 Projects created using this template will start out with the following file structure:
 
 ```
-└── root
-└── App.js                             // a sample landing page
+|── /ios                                   // ios project folder
+|── /android                               // android project folder
+|── /assets                                // fonts and images used by the application
+└── App.js                                 // sample landing page
 ```
