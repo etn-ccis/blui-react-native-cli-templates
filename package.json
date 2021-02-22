@@ -24,7 +24,7 @@
         "start:authentication-android": "cd demo && yarn start:authentication-android",
         "start:authentication-typescript-ios": "cd demo && yarn start:authentication-typescript-ios",
         "start:authentication-typescript-android": "cd demo && yarn start:authentication-typescript-android",
-        "precommit": "cd demo && yarn precommit && yarn prettier"
+        "precommit": "cd demo && bash ./scripts/buildBlank.sh && cd .. && yarn lint && yarn prettier"
     },
     "dependencies": {
         "react": "16.13.1"
