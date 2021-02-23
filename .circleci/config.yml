@@ -60,7 +60,7 @@ jobs:
             - run:
                 name: Publish @pxblue/react-native-template-routing
                 command: |
-                  cd blank-typescript
+                  cd routing
                   MASTER_VERSION=`node -p "require('./package.json').version"`
                   NPM_LATEST_VERSION=`npm show @pxblue/react-native-template-routing version`
                   if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
@@ -72,7 +72,7 @@ jobs:
             - run:
                 name: Publish @pxblue/react-native-template-routing-typescript
                 command: |
-                  cd blank-typescript
+                  cd routing-typescript
                   MASTER_VERSION=`node -p "require('./package.json').version"`
                   NPM_LATEST_VERSION=`npm show @pxblue/react-native-template-routing-typescript version`
                   if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
