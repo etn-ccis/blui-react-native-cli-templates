@@ -1,6 +1,6 @@
-# Authentication Template (TypeScript)
+# Authentication Template (JavaScript)
 
-![npm (scoped)](https://img.shields.io/npm/v/@pxblue/react-native-template-authentication-typescript?color=%23007bc1&label=%40pxblue%2Freact-native-template-authentication-typescript)
+![npm (scoped)](https://img.shields.io/npm/v/@pxblue/react-native-template-authentication?color=%23007bc1&label=%40pxblue%2Freact-native-template-authentication)
 
 This is an official PX Blue template used internally by the [PX Blue CLI](https://www.npmjs.com/package/@pxblue/cli).
 
@@ -9,7 +9,7 @@ This template installs and configures the PX Blue [react-native-auth-workflow](h
 ## Usage
 This template can be used with the PX Blue CLI:
 ```sh
-npx -p @pxblue/cli pxb new react-native --name=myapp --cli=rnc --language=ts --template=authentication
+npx -p @pxblue/cli pxb new react-native --name=myapp --cli=rnc --language=js --template=authentication
 ```
 
 ## Project Structure
@@ -19,18 +19,18 @@ Projects created using this template will start out with the following file stru
 |── /ios                              // ios project folder
 |── /android                          // android project folder
 |── /actions                          
-|   |── AuthUIActions.tsx             // handles the implementation of the authentication related actions (such as login and forgot password)
-|   └── RegistrationUIActions.tsx     // handles the implementation of the registration related actions (such as loading the EULA and registration by invitation)
+|   |── AuthUIActions.js              // handles the implementation of the authentication related actions (such as login and forgot password)
+|   └── RegistrationUIActions.js      // handles the implementation of the registration related actions (such as loading the EULA and registration by invitation)
 |── /assets                           // fonts and images used by the application
 |── App.tsx                           // app entry point
 |── /constants                          
-|   |── index.ts                      // application constants
-|   └── sampleEula.ts                 // sample Eula
+|   |── index.js                      // application constants
+|   └── sampleEula.js                 // sample Eula
 |── /pages                            // sample application pages
 |── /router                             
-|   |── index.tsx                     // sets up routing
-|   |── DeepLinking.ts                // sets up deep linking
-|   └── navigation-drawer.tsx         // sets up Drawer
+|   |── index.js                      // sets up routing
+|   |── DeepLinking.js                // sets up deep linking
+|   └── navigation-drawer.js          // sets up Drawer
 └── /store                             
-    └── local-storage.ts              // mock implementation for storing/retrieving user authentication session data 
+    └── local-storage.js              // mock implementation for storing/retrieving user authentication session data 
 ```

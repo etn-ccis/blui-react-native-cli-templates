@@ -1,0 +1,33 @@
+{
+    "dependencies": [
+        "@pxblue/colors@^3.0.0",
+        "@pxblue/icons-svg@^1.1.1",
+        "@pxblue/react-native-auth-workflow@^2.0.0",
+        "@pxblue/react-native-components@^4.1.0",
+        "@pxblue/react-native-themes@^5.0.0",
+        "@react-native-community/async-storage@^1.12.1",
+        "@react-native-community/masked-view@^0.1.10",
+        "@react-native-community/viewpager@~4.0.1",
+        "@react-navigation/drawer@^5.12.3",
+        "@react-navigation/native@^5.9.3",
+        "@react-navigation/stack@^5.14.3",
+        "date-fns@^2.17.0",
+        "highcharts@^9.0.1",
+        "i18next@^19.8.9",
+        "react@^17.0.1",
+        "react-i18next@^11.8.7",
+        "react-native@^0.63.4",
+        "react-native-gesture-handler@^1.10.2",
+        "react-native-keyboard-aware-scroll-view@^0.9.3",
+        "react-native-modal@^11.6.1",
+        "react-native-paper@^4.7.2",
+        "react-native-reanimated@^1.13.2",
+        "react-native-safe-area-context@^3.1.9",
+        "react-native-screens@^2.17.1",
+        "react-native-svg@^12.1.0",
+        "react-native-svg-transformer@^0.14.3",
+        "react-native-vector-icons@^8.0.0",
+        "react-native-webview@^11.2.3"
+    ],
+    "devDependencies": ["jest", "react-test-renderer", "@types/react-native-vector-icons"]
+}
