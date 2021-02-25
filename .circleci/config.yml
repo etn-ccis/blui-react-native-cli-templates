@@ -81,7 +81,7 @@ jobs:
                   else
                       echo "Latest version is already published."
                   fi
-             - run:
+            - run:
                 name: Publish @pxblue/react-native-template-authentication
                 command: |
                   cd authentication
