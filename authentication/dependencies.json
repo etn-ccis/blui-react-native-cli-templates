@@ -5,7 +5,7 @@
         "@pxblue/react-native-auth-workflow@^2.0.0",
         "@pxblue/react-native-components@^4.1.0",
         "@pxblue/react-native-themes@^5.0.0",
-        "@react-native-community/async-storage@^1.12.1",
+        "@react-native-async-storage/async-storage@^1.14.1",
         "@react-native-community/masked-view@^0.1.10",
         "@react-native-community/viewpager@~4.0.1",
         "@react-navigation/drawer@^5.12.3",
