@@ -81,6 +81,30 @@ jobs:
                   else
                       echo "Latest version is already published."
                   fi
+            - run:
+                name: Publish @pxblue/react-native-template-authentication
+                command: |
+                  cd authentication
+                  MASTER_VERSION=`node -p "require('./package.json').version"`
+                  NPM_LATEST_VERSION=`npm show @pxblue/react-native-template-authentication version`
+                  if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
+                  then
+                      npm publish
+                  else
+                      echo "Latest version is already published."
+                  fi
+            - run:
+                name: Publish @pxblue/react-native-template-authentication-typescript
+                command: |
+                  cd authentication-typescript
+                  MASTER_VERSION=`node -p "require('./package.json').version"`
+                  NPM_LATEST_VERSION=`npm show @pxblue/react-native-template-authentication-typescript version`
+                  if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
+                  then
+                      npm publish
+                  else
+                      echo "Latest version is already published."
+                  fi
 workflows:
     version: 2
     react-native-cli-templates:
