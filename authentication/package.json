@@ -1,0 +1,23 @@
+{
+    "name": "@pxblue/react-native-template-authentication",
+    "version": "1.0.0",
+    "keywords": [
+        "react native",
+        "template",
+        "pxblue",
+        "px blue",
+        "cli"
+    ],
+    "description": "A template with pre-configured login workflow and routing for React Native projects created with the PX Blue CLI.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pxblue/react-native-cli-templates.git"
+    },
+    "license": "BSD-3-Clause",
+    "engines": {
+        "node": ">=10"
+    },
+    "bugs": {
+        "url": "https://github.com/pxblue/react-native-cli-templates/issues"
+    }
+}
