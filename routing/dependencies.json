@@ -15,7 +15,7 @@
         "@react-navigation/native@^5.9.3",
         "@react-navigation/stack@^5.14.3",
         "react-native-gesture-handler@^1.10.3",
-        "react-native-reanimated@^2.0.1",
+        "react-native-reanimated@^1.0.0",
         "react-native-screens@^3.0.0"
     ],
     "devDependencies": ["jest-transform-stub"]
