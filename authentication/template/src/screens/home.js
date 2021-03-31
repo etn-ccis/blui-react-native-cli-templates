@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
 import { Avatar, Button, Divider, useTheme } from 'react-native-paper';
 import { Body1, H4, Header, UserMenu, wrapIcon } from '@pxblue/react-native-components';
-import Logo from '../assets/images/Logo.svg';
+import Logo from '../../assets/images/Logo.svg';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';

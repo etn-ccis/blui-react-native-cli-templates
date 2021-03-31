@@ -13,7 +13,7 @@ import {
 import { Button, Divider, useTheme } from 'react-native-paper';
 import { Body1, H4, Header, wrapIcon } from '@pxblue/react-native-components';
 import { Theme } from 'react-native-paper/lib/typescript/types';
-import Logo from '../assets/images/Logo.svg';
+import Logo from '../../assets/images/Logo.svg';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
