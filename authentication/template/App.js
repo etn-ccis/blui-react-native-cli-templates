@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import * as PXBThemes from '@pxblue/react-native-themes';
-import { MainRouter } from './router';
-import { ProjectAuthUIActions } from './actions/AuthUIActions';
-import { ProjectRegistrationUIActions } from './actions/RegistrationUIActions';
+import { MainRouter } from './src/navigation';
+import { ProjectAuthUIActions } from './src/actions/AuthUIActions';
+import { ProjectRegistrationUIActions } from './src/actions/RegistrationUIActions';
 import {
     SecurityContextProvider,
     AuthNavigationContainer,
@@ -11,7 +11,7 @@ import {
     useSecurityActions,
 } from '@pxblue/react-native-auth-workflow';
 import { useLinking } from '@react-navigation/native';
-import { authLinkMapping, resolveInitialState } from './router/DeepLinking';
+import { authLinkMapping, resolveInitialState } from './src/navigation/DeepLinking';
 
 export const AuthUIConfiguration = (props) => {
     const securityContextActions = useSecurityActions();

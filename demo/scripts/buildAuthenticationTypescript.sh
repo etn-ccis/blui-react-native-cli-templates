@@ -7,11 +7,7 @@ bash ./scripts/cleanup.sh
 
 echo -e "${BLUE}Copying Project Files${NC}"
 cp ../authentication-typescript/template/App.tsx ./
-cp -r ../authentication-typescript/template/pages ./
-cp -r ../authentication-typescript/template/router ./
-cp -r ../authentication-typescript/template/actions ./
-cp -r ../authentication-typescript/template/constants ./
-cp -r ../authentication-typescript/template/store ./
+cp -r ../authentication-typescript/template/src ./
 
 if [ ! -d ./assets ];
     then mkdir assets;
