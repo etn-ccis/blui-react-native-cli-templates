@@ -12,22 +12,6 @@ if [ -f ./App.tsx ];
     then rm App.tsx;
 fi;
 
-if [ -d ./pages ];
-    then rm -rf pages;
-fi;
-
-if [ -d ./router ];
-    then rm -rf router;
-fi;
-
-if [ -d ./actions ];
-    then rm -rf actions;
-fi;
-
-if [ -d ./constants ];
-    then rm -rf constants;
-fi;
-
-if [ -d ./store ];
-    then rm -rf store;
+if [ -d ./src ];
+    then rm -rf src;
 fi;
