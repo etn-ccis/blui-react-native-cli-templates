@@ -166,7 +166,7 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
                         Welcome to PX <H4 color={'primary'}>Blue</H4>.
                     </H4>
                     <Body1 style={defaultStyles.subtitle}>
-                        Edit <Body1 style={defaultStyles.bold}>pages/home.tsx</Body1> and save to reload.
+                        Edit <Body1 style={defaultStyles.bold}>screens/home.tsx</Body1> and save to reload.
                     </Body1>
                     <Divider style={defaultStyles.divider} />
                     <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />

@@ -8,7 +8,7 @@
 ### Fixed
 -   Jest configuration allows default tests to pass.
 
-## 1.0.0
+## v1.0.0
 
 ### Added
 -   Initial blank template for TypeScript projects

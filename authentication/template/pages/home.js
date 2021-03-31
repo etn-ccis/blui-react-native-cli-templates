@@ -134,7 +134,7 @@ const Home = ({ navigation }) => {
                         Welcome to PX <H4 color={'primary'}>Blue</H4>.
                     </H4>
                     <Body1 style={defaultStyles.subtitle}>
-                        Edit <Body1 style={defaultStyles.bold}>pages/home.js</Body1> and save to reload.
+                        Edit <Body1 style={defaultStyles.bold}>screens/home.js</Body1> and save to reload.
                     </Body1>
                     <Divider style={defaultStyles.divider} />
                     <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />
