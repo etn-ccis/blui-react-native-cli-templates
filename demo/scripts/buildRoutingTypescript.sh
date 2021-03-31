@@ -7,8 +7,7 @@ bash ./scripts/cleanup.sh
 
 echo -e "${BLUE}Copying Project Files${NC}"
 cp ../routing-typescript/template/App.tsx ./
-cp -r ../routing-typescript/template/pages ./
-cp -r ../routing-typescript/template/router ./
+cp -r ../routing-typescript/template/src ./
 
 if [ ! -d ./assets ];
     then mkdir assets;

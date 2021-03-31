@@ -1,7 +1,6 @@
 import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem, wrapIcon } from '@pxblue/react-native-components';
 import React, { useState, useCallback } from 'react';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import { IconButton } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
