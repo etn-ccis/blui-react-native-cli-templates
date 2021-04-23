@@ -8,10 +8,14 @@
         "px blue",
         "cli"
     ],
+
     "description": "A template with pre-configured routing for React Native projects created with the PX Blue CLI.",
     "repository": {
         "type": "git",
         "url": "https://github.com/pxblue/react-native-cli-templates.git"
+    },
+    "scripts": {
+        "publish:package": "set npm_config_yes=true && npx -p @pxblue/publish pxb-publish"
     },
     "license": "BSD-3-Clause",
     "engines": {
