@@ -32,9 +32,9 @@ jobs:
             - checkout
             - run:
                 name: Authenticate with registry
-                  command: |
-                    echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-                    echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+                command: |
+                  echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+                  echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
             - run:
                 name: Publish @pxblue/react-native-template-blank
                 command: |
