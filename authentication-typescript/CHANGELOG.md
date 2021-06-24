@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.0 (Unpublished)
+
+### Changed
+-   Dropped version of react-native-webview peerDependency to match requirements of @pxblue/react-native-auth-workflow.
+
 ## v1.1.0 (March 31, 2021)
 
 ### Changed
