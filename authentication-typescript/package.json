@@ -1,6 +1,6 @@
 {
     "name": "@pxblue/react-native-template-authentication-typescript",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "keywords": [
         "react native",
         "template",
@@ -12,6 +12,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/pxblue/react-native-cli-templates.git"
+    },
+    "scripts": {
+        "publish:package": "set npm_config_yes=true && npx -p @pxblue/publish pxb-publish"
     },
     "license": "BSD-3-Clause",
     "engines": {
