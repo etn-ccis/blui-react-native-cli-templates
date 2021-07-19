@@ -27,6 +27,7 @@ jobs:
                   name: Lint
                   command: |
                       yarn lint
+
     publish:
         docker:
           - image: circleci/node:12.9.1-browsers
@@ -63,35 +64,35 @@ jobs:
                   cd authentication-typescript && yarn publish:package -b $CIRCLE_BRANCH
 
     tag:
-      docker:
-        - image: circleci/node:12.9.1-browsers
-      steps:
-        - checkout
-        - gh/setup
-        - run:
-            name: Tag @pxblue/react-native-template-blank
-            command: |
-              cd blank && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-blank
-        - run:
-            name: Tag @pxblue/react-native-template-blank-typescript
-            command: |
-              cd blank-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-blank-typescript
-        - run:
-            name: Tag @pxblue/react-native-template-routing
-            command: |
-              cd routing && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-routing
-        - run:
-            name: Tag @pxblue/react-native-template-routing-typescript
-            command: |
-              cd routing-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-routing-typescript
-        - run:
-            name: Tag @pxblue/react-native-template-authentication
-            command: |
-              cd authentication && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-authentication
-        - run:
-            name: Tag @pxblue/react-native-template-authentication-typescript
-            command: |
-              cd authentication-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-authentication-typescript
+        docker:
+            - image: circleci/node:12.9.1-browsers
+        steps:
+            - checkout
+            - gh/setup
+            - run:
+                name: Tag @pxblue/react-native-template-blank
+                command: |
+                  cd blank && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-blank
+            - run:
+                name: Tag @pxblue/react-native-template-blank-typescript
+                command: |
+                  cd blank-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-blank-typescript
+            - run:
+                name: Tag @pxblue/react-native-template-routing
+                command: |
+                  cd routing && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-routing
+            - run:
+                name: Tag @pxblue/react-native-template-routing-typescript
+                command: |
+                  cd routing-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-routing-typescript
+            - run:
+                name: Tag @pxblue/react-native-template-authentication
+                command: |
+                  cd authentication && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-authentication
+            - run:
+                name: Tag @pxblue/react-native-template-authentication-typescript
+                command: |
+                  cd authentication-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -cra-template-authentication-typescript
 
 workflows:
     version: 2
@@ -104,12 +105,12 @@ workflows:
                 filters:
                     branches:
                         only:
-                            - master
-                            - dev
+                          - master
+                          - dev
             - tag:
                 requires:
                   - build_project
                 filters:
-                  branches:
-                    only:
-                      - master
+                    branches:
+                        only:
+                          - master
