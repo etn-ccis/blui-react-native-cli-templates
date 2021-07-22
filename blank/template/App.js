@@ -1,3 +1,10 @@
+/**
+ Copyright (c) 2021-present, Eaton
+
+ All rights reserved.
+
+ This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
+ **/
 import React, { useCallback } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
 import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
