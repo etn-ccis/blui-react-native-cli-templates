@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.2.0 (July 22, 2021)
+## v1.2.0 (July 26, 2021)
 
 ### Changed
 - Updated version of react-native-modal dependency to 12.0.2
