@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.1 (Not Published Yet)
+
+### Changed
+- Changed default drawer width to 300.
+
 ## v1.2.0 (July 26, 2021)
 
 ### Changed
