@@ -45,7 +45,7 @@ export const NavigationDrawer = ({ navigation }) => {
                 fontColor={Colors.white[50]}
                 icon={{
                     icon: Menu,
-                    onPress: (): void => {
+                    onPress: () => {
                         navigation.closeDrawer();
                     },
                 }}
