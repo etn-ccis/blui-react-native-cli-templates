@@ -17,6 +17,7 @@ import {
     Animated,
     Easing,
 } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
 import * as PXBThemes from '@pxblue/react-native-themes';
 import { Body1, Header, H4 } from '@pxblue/react-native-components';
@@ -108,6 +109,7 @@ const App = (): JSX.Element => {
 
     return (
         <ThemeProvider theme={PXBThemes.blue}>
+            <SafeAreaProvider>
             <Header title={'PX Blue React Native'} />
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView>
@@ -145,6 +147,7 @@ const App = (): JSX.Element => {
                     />
                 </ScrollView>
             </SafeAreaView>
+            </SafeAreaProvider>
         </ThemeProvider>
     );
 };
