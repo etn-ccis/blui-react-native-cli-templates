@@ -145,20 +145,20 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@pxblue/eslint-config@^2.0.2":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@pxblue/eslint-config/-/eslint-config-2.0.4.tgz#b22d637e2e8bbf1d8606de99bfd7e95f3af2ce34"
-  integrity sha512-PDBj5dhi/6c14/QYhoFLTkMnrYRTKw8hW7AuFq/9wc7pJ4MdSOF3i5MJH1NZ1p9chBl9na4ZASPeHWsDCvvk8A==
+"@pxblue/eslint-config@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@pxblue/eslint-config/-/eslint-config-2.0.5.tgz#2c9f9156175cd99aef2d579e834716f3c0877c93"
+  integrity sha512-nkFi1CSD37OutixMlapg5zPJ3HE+RyokgYmR4J7Uput5Jp6MIzvUw+YeRCT0KWOoWq5snTxyUvIA0ANuX/sXig==
   dependencies:
     "@typescript-eslint/parser" "^4.8.0"
     eslint-config-prettier ">= 6.3.0"
   optionalDependencies:
     eslint-plugin-react "^7.16.0"
 
-"@pxblue/prettier-config@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
-  integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
+"@pxblue/prettier-config@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.3.tgz#285b9ba346f714d397ef4a59579443b95a77e63e"
+  integrity sha512-x9SDup4pf5H54r/stZBXz7/XlMcIqnwHkEJ+9pyXVtGyQljI28lDGQCWQj6heipWAett50yx0RB3P2+MWZDhJA==
 
 "@react-native-community/eslint-config@^1.1.0":
   version "1.1.0"
