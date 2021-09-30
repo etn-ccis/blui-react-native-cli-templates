@@ -22,7 +22,7 @@ export const MainRouter = () => (
     <NavigationContainer>
         <Drawer.Navigator
             initialRouteName="Home"
-            drawerStyle={{ backgroundColor: 'transparent', width: 300 }}
+            drawerStyle={{ backgroundColor: 'transparent', width: 300, maxWidth: '80%' }}
             drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
             <RootStack.Screen name="Home" component={Home} />
