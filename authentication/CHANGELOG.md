@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.1 (October 1, 2021)
+
+### Fixed
+
+- Issue with template using the wrong dependency for `@pxblue/react-native-auth-workflow`
+
 ## v1.3.0 (September 30, 2021)
 
 ### Changed
