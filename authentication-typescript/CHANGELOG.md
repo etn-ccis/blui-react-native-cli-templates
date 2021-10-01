@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.2 (October 1, 2021)
+
+### Fixed
+
+- Added dependency for `@pxblue/react-native-vector-icons`
+
 ## v1.3.1 (October 1, 2021)
 
 ### Fixed
