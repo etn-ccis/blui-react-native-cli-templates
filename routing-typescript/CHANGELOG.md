@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.0 (September 30, 2021)
+
+### Changed
+- Upgrade PX Blue packages
+- Changed default drawer width to 300.
+
 ## v1.2.0 (July 26, 2021)
 
 ### Changed

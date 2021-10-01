@@ -7,6 +7,7 @@
  **/
 import React from 'react';
 import { Provider as ThemeProvider } from 'react-native-paper';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import * as PXBThemes from '@pxblue/react-native-themes';
 import { MainRouter } from './src/navigation';
 import { ProjectAuthUIActions } from './src/actions/AuthUIActions';
@@ -48,13 +49,15 @@ export const App = (): JSX.Element => {
 
     return (
         <ThemeProvider theme={PXBThemes.blue}>
-            <SecurityContextProvider>
-                <AuthUIConfiguration>
-                    <AuthNavigationContainer initialState={initialState} ref={ref}>
-                        <MainRouter />
-                    </AuthNavigationContainer>
-                </AuthUIConfiguration>
-            </SecurityContextProvider>
+            <SafeAreaProvider>
+                <SecurityContextProvider>
+                    <AuthUIConfiguration>
+                        <AuthNavigationContainer initialState={initialState} ref={ref}>
+                            <MainRouter />
+                        </AuthNavigationContainer>
+                    </AuthUIConfiguration>
+                </SecurityContextProvider>
+            </SafeAreaProvider>
         </ThemeProvider>
     );
 };
