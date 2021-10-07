@@ -6,17 +6,17 @@ export const navGroupItems = [
     {
         title: 'Home Page',
         itemID: 'Home',
-        icon: {name: 'home'},
+        icon: { name: 'home' },
     },
     {
         title: 'Page One',
         itemID: 'PageOne',
-        icon: {name: 'looks-one'},
+        icon: { name: 'looks-one' },
     },
     {
         title: 'Page Two',
         itemID: 'PageTwo',
-        icon: {name: 'looks-two'},
+        icon: { name: 'looks-two' },
     },
 ];
 
@@ -36,7 +36,7 @@ export const NavigationDrawer = ({ navigation }) => {
                 title={'PX Blue'}
                 subtitle={'React Native Project'}
                 fontColor={Colors.white[50]}
-                icon={{name: 'menu'}}
+                icon={{ name: 'menu' }}
                 onIconPress={() => {
                     navigation.closeDrawer();
                 }}

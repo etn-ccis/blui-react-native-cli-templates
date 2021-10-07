@@ -4,7 +4,7 @@ import { Button, Divider, useTheme } from 'react-native-paper';
 import { Body1, H4, Header } from '@pxblue/react-native-components';
 import Logo from '../../assets/images/Logo.svg';
 
-const MenuIcon = {name: 'menu', direction: 'ltr'};
+const MenuIcon = { name: 'menu', direction: 'ltr' };
 
 const styles = (theme) =>
     StyleSheet.create({
@@ -49,11 +49,7 @@ const OpenURLButton = (props) => {
     }, [url]);
 
     return (
-        <Button
-            onPress={() => handlePress()}
-            labelStyle={defaultStyles.openURLButtonText}
-            uppercase={false}
-        >
+        <Button onPress={() => handlePress()} labelStyle={defaultStyles.openURLButtonText} uppercase={false}>
             {title}
         </Button>
     );

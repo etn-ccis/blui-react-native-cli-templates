@@ -17,7 +17,7 @@ import Logo from '../../assets/images/Logo.svg';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
 
-const MenuIcon: IconFamily = {name: 'menu', direction: 'ltr'};
+const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };
 
 const styles = (
     theme: Theme

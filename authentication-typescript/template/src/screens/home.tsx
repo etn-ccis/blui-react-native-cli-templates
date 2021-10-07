@@ -20,9 +20,9 @@ import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
 import * as Colors from '@pxblue/colors';
 
-const MenuIcon: IconFamily = {name: 'menu', direction: 'ltr'};
-const LockIcon: IconFamily = {name: 'lock', direction: 'ltr'};
-const ExitToAppIcon: IconFamily = {name: 'exit-to-app', direction: 'ltr'};
+const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };
+const LockIcon: IconFamily = { name: 'lock', direction: 'ltr' };
+const ExitToAppIcon: IconFamily = { name: 'exit-to-app', direction: 'ltr' };
 
 const styles = (
     theme: Theme

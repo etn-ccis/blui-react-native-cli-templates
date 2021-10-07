@@ -6,10 +6,10 @@ import { LocalStorage } from '../store/local-storage';
 import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import * as Colors from '@pxblue/colors';
 
-const Event = {name: 'event', direction: 'rtl'};
-const MenuIcon = {name: 'menu', direction: 'ltr'};
-const LockIcon = {name: 'lock', direction: 'ltr'};
-const ExitToAppIcon = {name: 'exit-to-app', direction: 'ltr'};
+const Event = { name: 'event', direction: 'rtl' };
+const MenuIcon = { name: 'menu', direction: 'ltr' };
+const LockIcon = { name: 'lock', direction: 'ltr' };
+const ExitToAppIcon = { name: 'exit-to-app', direction: 'ltr' };
 const styles = () =>
     StyleSheet.create({
         content: {

@@ -7,9 +7,9 @@ import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
 import * as Colors from '@pxblue/colors';
 
-const MenuIcon = {name: 'menu', direction: 'ltr'};
-const LockIcon = {name: 'lock', direction: 'ltr'};
-const ExitToAppIcon = {name: 'exit-to-app', direction: 'ltr'};
+const MenuIcon = { name: 'menu', direction: 'ltr' };
+const LockIcon = { name: 'lock', direction: 'ltr' };
+const ExitToAppIcon = { name: 'exit-to-app', direction: 'ltr' };
 
 const styles = (theme) =>
     StyleSheet.create({
@@ -54,11 +54,7 @@ const OpenURLButton = (props) => {
     }, [url]);
 
     return (
-        <Button
-            onPress={() => handlePress()}
-            labelStyle={defaultStyles.openURLButtonText}
-            uppercase={false}
-        >
+        <Button onPress={() => handlePress()} labelStyle={defaultStyles.openURLButtonText} uppercase={false}>
             {title}
         </Button>
     );

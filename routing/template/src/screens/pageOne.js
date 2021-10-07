@@ -1,8 +1,8 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import { EmptyState, Header } from '@pxblue/react-native-components';
-const Event = {name: 'event', direction: 'rtl'};
-const MenuIcon = {name: 'menu', direction: 'ltr'};
+const Event = { name: 'event', direction: 'rtl' };
+const MenuIcon = { name: 'menu', direction: 'ltr' };
 
 const styles = () =>
     StyleSheet.create({
