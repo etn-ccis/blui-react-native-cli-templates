@@ -11,19 +11,18 @@ import {
     Easing,
 } from 'react-native';
 import { Avatar, Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, InfoListItemProps, UserMenu, wrapIcon } from '@pxblue/react-native-components';
+import { Body1, H4, Header, IconFamily, InfoListItemProps, UserMenu } from '@pxblue/react-native-components';
 import { Theme } from 'react-native-paper/lib/typescript/types';
 import Logo from '../../assets/images/Logo.svg';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
 import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
 import * as Colors from '@pxblue/colors';
 
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
-const LockIcon = wrapIcon({ IconClass: MatIcon, name: 'lock', flip: false });
-const ExitToAppIcon = wrapIcon({ IconClass: MatIcon, name: 'exit-to-app', flip: false });
+const MenuIcon: IconFamily = {name: 'menu', direction: 'ltr'};
+const LockIcon: IconFamily = {name: 'lock', direction: 'ltr'};
+const ExitToAppIcon: IconFamily = {name: 'exit-to-app', direction: 'ltr'};
 
 const styles = (
     theme: Theme
@@ -123,19 +122,17 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
     };
 
     const menuItems: InfoListItemProps[] = [
-        { title: 'Change Password', IconClass: LockIcon, onPress: (): void => changePassword() },
-        { title: 'Log Out', IconClass: ExitToAppIcon, onPress: (): void => logOut() },
+        { title: 'Change Password', icon: LockIcon, onPress: (): void => changePassword() },
+        { title: 'Log Out', icon: ExitToAppIcon, onPress: (): void => logOut() },
     ];
 
     return (
         <>
             <Header
                 title={'Home Page'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: (): void => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={(): void => {
+                    navigation.openDrawer();
                 }}
                 actionItems={[
                     {
