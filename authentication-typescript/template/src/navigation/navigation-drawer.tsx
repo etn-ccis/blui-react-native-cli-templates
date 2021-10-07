@@ -47,7 +47,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                     navigation.closeDrawer();
                 }}
             />
-            < DrawerBody>
+            <DrawerBody>
                 <DrawerNavGroup items={navGroupItems} hidePadding={false} />
             </DrawerBody>
         </Drawer>

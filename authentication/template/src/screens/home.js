@@ -1,16 +1,15 @@
 import React, { useCallback } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
 import { Avatar, Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, UserMenu, wrapIcon } from '@pxblue/react-native-components';
+import { Body1, H4, Header, UserMenu } from '@pxblue/react-native-components';
 import Logo from '../../assets/images/Logo.svg';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
 import * as Colors from '@pxblue/colors';
 
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
-const LockIcon = wrapIcon({ IconClass: MatIcon, name: 'lock', flip: false });
-const ExitToAppIcon = wrapIcon({ IconClass: MatIcon, name: 'exit-to-app', flip: false });
+const MenuIcon = {name: 'menu', direction: 'ltr'};
+const LockIcon = {name: 'lock', direction: 'ltr'};
+const ExitToAppIcon = {name: 'exit-to-app', direction: 'ltr'};
 
 const styles = (theme) =>
     StyleSheet.create({
@@ -55,7 +54,11 @@ const OpenURLButton = (props) => {
     }, [url]);
 
     return (
-        <Button onPress={() => handlePress()} labelStyle={defaultStyles.openURLButtonText} uppercase={false}>
+        <Button
+            onPress={() => handlePress()}
+            labelStyle={defaultStyles.openURLButtonText}
+            uppercase={false}
+        >
             {title}
         </Button>
     );
@@ -91,19 +94,17 @@ const Home = ({ navigation }) => {
     };
 
     const menuItems = [
-        { title: 'Change Password', IconClass: LockIcon, onPress: () => changePassword() },
-        { title: 'Log Out', IconClass: ExitToAppIcon, onPress: () => logOut() },
+        { title: 'Change Password', icon: LockIcon, onPress: () => changePassword() },
+        { title: 'Log Out', icon: ExitToAppIcon, onPress: () => logOut() },
     ];
 
     return (
         <>
             <Header
                 title={'Home Page'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: () => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={() => {
+                    navigation.openDrawer();
                 }}
                 actionItems={[
                     {

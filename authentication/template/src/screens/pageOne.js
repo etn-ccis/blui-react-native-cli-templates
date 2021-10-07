@@ -1,17 +1,15 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import { EmptyState, Header, UserMenu, wrapIcon } from '@pxblue/react-native-components';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
+import { EmptyState, Header, UserMenu } from '@pxblue/react-native-components';
 import { Avatar } from 'react-native-paper';
 import { LocalStorage } from '../store/local-storage';
 import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
 import * as Colors from '@pxblue/colors';
 
-const Event = wrapIcon({ IconClass: MatIcon, name: 'event', flip: false });
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
-const LockIcon = wrapIcon({ IconClass: MatIcon, name: 'lock', flip: false });
-const ExitToAppIcon = wrapIcon({ IconClass: MatIcon, name: 'exit-to-app', flip: false });
-
+const Event = {name: 'event', direction: 'rtl'};
+const MenuIcon = {name: 'menu', direction: 'ltr'};
+const LockIcon = {name: 'lock', direction: 'ltr'};
+const ExitToAppIcon = {name: 'exit-to-app', direction: 'ltr'};
 const styles = () =>
     StyleSheet.create({
         content: {
@@ -38,19 +36,17 @@ const PageOne = ({ navigation }) => {
     };
 
     const menuItems = [
-        { title: 'Change Password', IconClass: LockIcon, onPress: () => changePassword() },
-        { title: 'Log Out', IconClass: ExitToAppIcon, onPress: () => logOut() },
+        { title: 'Change Password', icon: LockIcon, onPress: () => changePassword() },
+        { title: 'Log Out', icon: ExitToAppIcon, onPress: () => logOut() },
     ];
 
     return (
         <>
             <Header
                 title={'Page One'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: () => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={() => {
+                    navigation.openDrawer();
                 }}
                 actionItems={[
                     {
@@ -73,7 +69,7 @@ const PageOne = ({ navigation }) => {
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView contentContainerStyle={defaultStyles.scrollViewContent}>
                     <EmptyState
-                        IconClass={Event}
+                        icon={Event}
                         title={'Coming Soon'}
                         description={'Replace this page with your own content'}
                     />

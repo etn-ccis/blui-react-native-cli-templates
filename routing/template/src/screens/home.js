@@ -1,11 +1,10 @@
 import React, { useCallback } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
 import { Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, wrapIcon } from '@pxblue/react-native-components';
+import { Body1, H4, Header } from '@pxblue/react-native-components';
 import Logo from '../../assets/images/Logo.svg';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
+const MenuIcon = {name: 'menu', direction: 'ltr'};
 
 const styles = (theme) =>
     StyleSheet.create({
@@ -50,7 +49,11 @@ const OpenURLButton = (props) => {
     }, [url]);
 
     return (
-        <Button onPress={() => handlePress()} labelStyle={defaultStyles.openURLButtonText} uppercase={false}>
+        <Button
+            onPress={() => handlePress()}
+            labelStyle={defaultStyles.openURLButtonText}
+            uppercase={false}
+        >
             {title}
         </Button>
     );
@@ -79,11 +82,9 @@ const Home = ({ navigation }) => {
         <>
             <Header
                 title={'Home Page'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: () => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={() => {
+                    navigation.openDrawer();
                 }}
             />
             <SafeAreaView style={defaultStyles.content}>
