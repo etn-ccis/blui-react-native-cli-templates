@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.0 (Unpublished)
+
+### Changed
+
+- Updated to use latest APIs from `@pxblue/react-native-components`.
+
 ## v1.3.1 (October 1, 2021)
 
 ### Fixed
