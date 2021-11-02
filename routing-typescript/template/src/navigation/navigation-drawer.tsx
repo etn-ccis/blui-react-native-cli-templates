@@ -1,30 +1,24 @@
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem, wrapIcon } from '@pxblue/react-native-components';
+import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem } from '@pxblue/react-native-components';
 import React, { useState, useCallback } from 'react';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import * as Colors from '@pxblue/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
-
-const Menu = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
-const Home = wrapIcon({ IconClass: MatIcon, name: 'home', flip: false });
-const LooksOne = wrapIcon({ IconClass: MatIcon, name: 'looks-one', flip: false });
-const LooksTwo = wrapIcon({ IconClass: MatIcon, name: 'looks-two', flip: false });
 
 export const navGroupItems: NavItem[] = [
     {
         title: 'Home Page',
         itemID: 'Home',
-        icon: Home,
+        icon: { name: 'home' },
     },
     {
         title: 'Page One',
         itemID: 'PageOne',
-        icon: LooksOne,
+        icon: { name: 'looks-one' },
     },
     {
         title: 'Page Two',
         itemID: 'PageTwo',
-        icon: LooksTwo,
+        icon: { name: 'looks-two' },
     },
 ];
 
@@ -48,11 +42,9 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 title={'PX Blue'}
                 subtitle={'React Native Project'}
                 fontColor={Colors.white[50]}
-                icon={{
-                    icon: Menu,
-                    onPress: (): void => {
-                        navigation.closeDrawer();
-                    },
+                icon={{ name: 'menu' }}
+                onIconPress={(): void => {
+                    navigation.closeDrawer();
                 }}
             />
             <DrawerBody>
