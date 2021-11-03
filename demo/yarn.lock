@@ -1088,23 +1088,24 @@
   resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
   integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
 
-"@pxblue/react-auth-shared@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-auth-shared/-/react-auth-shared-3.0.0.tgz#c0a5f26686e4bb0a736c80624dd9b58837b0c4b2"
-  integrity sha512-cWr1q/cMggpX2I40O6RwjOOM1De3TqP1ymqiMTW6nceBGxsrZQDu1ujo3Oiua/0hGbcwJKfYGQNoBSIV0fH+sA==
+"@pxblue/react-auth-shared@^3.4.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-auth-shared/-/react-auth-shared-3.5.0.tgz#e3526c4b1962fa2a2d9ee848a7f88c013de6502b"
+  integrity sha512-cc1f8dBPuwq59dk0xmiSVwPRk7R2SAgRHeG/NaKc11/+oir5VL+rbWuZ4Y/X16ZbtPeYylRDFmDuNSOV53wjeg==
 
-"@pxblue/react-native-auth-workflow@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-auth-workflow/-/react-native-auth-workflow-3.0.0.tgz#061316af19d9288b978e7259e698178b5b4f391e"
-  integrity sha512-E/Fdzac/CpEF+Y973asu8f+RT5d+hlc5Xnmlns0fRvXbT3rPHwZBdzEXBCvBzpGpkPZFw57zzV8CoDMWaUTObg==
+"@pxblue/react-native-auth-workflow@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-auth-workflow/-/react-native-auth-workflow-4.0.0.tgz#cb0b43c42fece00933fc9baec84b6251c273a161"
+  integrity sha512-y/DLZGCu3bs/MWfjZb2RzwlKtDE9qeZ2wWd8NAIrI9AF/B53V1rVGp9mraapxtgMZ8PKQMVxqAqKIL8B+CIZEA==
   dependencies:
-    "@pxblue/react-auth-shared" "^3.0.0"
+    "@pxblue/react-auth-shared" "^3.4.0"
+    lodash.clonedeep "^4.5.0"
     react-native-status-bar-height "^2.5.0"
 
-"@pxblue/react-native-components@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-6.0.0.tgz#2347f207e8757fe210f1b3e3f6ae4f3a570207a0"
-  integrity sha512-G0fq6yhJYiaJftkp/vmS8uN/tJ/0SWCwfCrKn/Sv5FsooTEC9ZsGUwxR4Q/odzekpuMZfWWFsXe3hMHd+JmorQ==
+"@pxblue/react-native-components@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-6.0.1.tgz#130af0dede73ee5f789c3641298ff7ca32d105d7"
+  integrity sha512-vG7UmF8tZZrPHZFJUCKgLOgOhDewy28xdorRXLBia2uVUWzRa/YIhGJ1Obtfj4tuGi6d8aQIQi0SSEF3k5TDOg==
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.2"
@@ -1562,10 +1563,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@^0.63.2":
-  version "0.63.52"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.52.tgz#449beb4a413ec0f2c172cbf676a95f5b0952adf4"
-  integrity sha512-sBXvvtJaIUSXQLDh9NZitx1KHkKUdBLZy34lFKJaIXtpHIh5OEbBXeyUTFBtFwjk/RD0tneAtUqsdhheZRzAzw==
+"@types/react-native@^0.64.1":
+  version "0.64.18"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.18.tgz#b672bbffb00103aeb84477e0e19eb5203ee8a3b5"
+  integrity sha512-irrhCPxKVr4TWyDjpf/h8YtQ9kdbKRKo+VuMLw295fnzKnFZRc5+m2oQ1BCI6V5cjfVqwLimqH7MrLCLK6Shpw==
   dependencies:
     "@types/react" "*"
 
