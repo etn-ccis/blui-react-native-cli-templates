@@ -1,9 +1,8 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import { EmptyState, Header, wrapIcon } from '@pxblue/react-native-components';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
-const Event = wrapIcon({ IconClass: MatIcon, name: 'event', flip: false });
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
+import { EmptyState, Header } from '@pxblue/react-native-components';
+const Event = { name: 'event', direction: 'rtl' };
+const MenuIcon = { name: 'menu', direction: 'ltr' };
 
 const styles = () =>
     StyleSheet.create({
@@ -24,17 +23,15 @@ const PageOne = ({ navigation }) => {
         <>
             <Header
                 title={'Page One'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: () => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={() => {
+                    navigation.openDrawer();
                 }}
             />
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView contentContainerStyle={defaultStyles.scrollViewContent}>
                     <EmptyState
-                        IconClass={Event}
+                        icon={Event}
                         title={'Coming Soon'}
                         description={'Replace this page with your own content'}
                     />

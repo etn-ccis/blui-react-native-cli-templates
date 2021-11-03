@@ -11,14 +11,13 @@ import {
     Easing,
 } from 'react-native';
 import { Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, wrapIcon } from '@pxblue/react-native-components';
+import { Body1, H4, Header, IconFamily } from '@pxblue/react-native-components';
 import { Theme } from 'react-native-paper/lib/typescript/types';
 import Logo from '../../assets/images/Logo.svg';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
 
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: false });
+const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };
 
 const styles = (
     theme: Theme
@@ -111,11 +110,9 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
         <>
             <Header
                 title={'Home Page'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: (): void => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={(): void => {
+                    navigation.openDrawer();
                 }}
             />
             <SafeAreaView style={defaultStyles.content}>
