@@ -93,7 +93,7 @@ const App = () => {
                             </Animated.View>
                         </View>
                         <H4 style={defaultStyles.title}>
-                            Welcome to PX <H4 color={'primary'}>Blue</H4>.
+                            Welcome to Brightlayer <H4 color={'primary'}>UI</H4>.
                         </H4>
                         <Body1 style={defaultStyles.subtitle}>
                             Edit <Body1 style={defaultStyles.bold}>App.js</Body1> and save to reload.

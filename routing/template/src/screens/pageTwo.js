@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import { EmptyState, Header } from '@pxblue/react-native-components';
+import { EmptyState, Header } from '@brightlayer-ui/react-native-components';
 const Event = { name: 'event', direction: 'rtl' };
 const MenuIcon = { name: 'menu', direction: 'ltr' };
 
