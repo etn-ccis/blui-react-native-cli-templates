@@ -30,8 +30,8 @@
         "react": "16.13.1"
     },
     "devDependencies": {
-        "@pxblue/eslint-config": "^2.0.5",
-        "@pxblue/prettier-config": "^1.0.3",
+        "@brightlayer-ui/eslint-config": "^2.0.5",
+        "@brightlayer-ui/prettier-config": "^1.0.3",
         "@react-native-community/eslint-config": "^1.1.0",
         "@typescript-eslint/eslint-plugin": "^4.5.0",
         "@typescript-eslint/parser": "^4.5.0",
@@ -40,5 +40,5 @@
         "eslint-plugin-react": "^7.0.0",
         "typescript": "^3.8.3"
     },
-    "prettier": "@pxblue/prettier-config"
+    "prettier": "@brightlayer-ui/prettier-config"
 }

@@ -1,6 +1,6 @@
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem } from '@pxblue/react-native-components';
+import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem } from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
 

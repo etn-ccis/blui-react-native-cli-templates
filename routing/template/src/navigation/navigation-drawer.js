@@ -1,6 +1,6 @@
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup } from '@pxblue/react-native-components';
+import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup } from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 export const navGroupItems = [
     {

@@ -11,14 +11,14 @@ import {
     Easing,
 } from 'react-native';
 import { Avatar, Button, Divider, useTheme } from 'react-native-paper';
-import { Body1, H4, Header, IconFamily, InfoListItemProps, UserMenu } from '@pxblue/react-native-components';
+import { Body1, H4, Header, IconFamily, InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
 import { Theme } from 'react-native-paper/lib/typescript/types';
 import Logo from '../../assets/images/Logo.svg';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
-import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
+import { useSecurityActions } from '@brightlayer-ui/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };
 const LockIcon: IconFamily = { name: 'lock', direction: 'ltr' };
@@ -166,25 +166,25 @@ const Home: React.FC<AppProps> = ({ navigation }): JSX.Element => {
                         Edit <Body1 style={defaultStyles.bold}>screens/home.tsx</Body1> and save to reload.
                     </Body1>
                     <Divider style={defaultStyles.divider} />
-                    <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />
+                    <OpenURLButton title={'Brightlayer UI Documentation'} url={'https://brightlayer-ui.github.io/'} />
                     <OpenURLButton
                         title={'React Native Getting Started Guide'}
-                        url={'https://pxblue.github.io/development/frameworks-mobile/react-native'}
+                        url={'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'}
                     />
-                    <OpenURLButton title={'Design Pattern Descriptions'} url={'https://pxblue.github.io/patterns'} />
+                    <OpenURLButton title={'Design Pattern Descriptions'} url={'https://brightlayer-ui.github.io/patterns'} />
                     <OpenURLButton
-                        title={'PX Blue React Native Component Library'}
-                        url={'https://pxblue-components.github.io/react-native/'}
+                        title={'React Native Component Library'}
+                        url={'https://brightlayer-ui-components.github.io/react-native/'}
                     />
-                    <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/pxblue'} />
+                    <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/brightlayer-ui'} />
                     <OpenURLButton
                         title={'Design Pattern Source on GitHub'}
-                        url={'https://github.com/pxblue/react-native-design-patterns'}
+                        url={'https://github.com/brightlayer-ui/react-native-design-patterns'}
                     />
-                    <OpenURLButton title={'Release Roadmap'} url={'https://pxblue.github.io/roadmap'} />
+                    <OpenURLButton title={'Release Roadmap'} url={'https://brightlayer-ui.github.io/roadmap'} />
                     <OpenURLButton
                         title={'Send Feedback or Suggestions'}
-                        url={'https://pxblue.github.io/community/contactus'}
+                        url={'https://brightlayer-ui.github.io/community/contactus'}
                     />
                 </ScrollView>
             </SafeAreaView>

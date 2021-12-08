@@ -9,8 +9,8 @@ import React, { useCallback } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Linking, View, Animated, Easing } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
-import * as PXBThemes from '@pxblue/react-native-themes';
-import { Body1, Header, H4 } from '@pxblue/react-native-components';
+import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
+import { Body1, Header, H4 } from '@brightlayer-ui/react-native-components';
 import Logo from './assets/images/Logo.svg';
 
 const styles = (theme) =>
@@ -82,9 +82,9 @@ const App = () => {
     });
 
     return (
-        <ThemeProvider theme={PXBThemes.blue}>
+        <ThemeProvider theme={BLUIThemes.blue}>
             <SafeAreaProvider>
-                <Header title={'PX Blue React Native'} />
+                <Header title={'Brightlayer UI React Native'} />
                 <SafeAreaView style={defaultStyles.content}>
                     <ScrollView>
                         <View style={defaultStyles.pxbLogoWrapper}>
@@ -99,28 +99,28 @@ const App = () => {
                             Edit <Body1 style={defaultStyles.bold}>App.js</Body1> and save to reload.
                         </Body1>
                         <Divider style={defaultStyles.divider} />
-                        <OpenURLButton title={'PX Blue Documentation'} url={'https://pxblue.github.io/'} />
+                        <OpenURLButton title={'Brightlayer UI Documentation'} url={'https://brightlayer-ui.github.io/'} />
                         <OpenURLButton
                             title={'React Native Getting Started Guide'}
-                            url={'https://pxblue.github.io/development/frameworks-mobile/react-native'}
+                            url={'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'}
                         />
                         <OpenURLButton
                             title={'Design Pattern Descriptions'}
-                            url={'https://pxblue.github.io/patterns'}
+                            url={'https://brightlayer-ui.github.io/patterns'}
                         />
                         <OpenURLButton
-                            title={'PX Blue React Native Component Library'}
-                            url={'https://pxblue-components.github.io/react-native/'}
+                            title={'React Native Component Library'}
+                            url={'https://brightlayer-ui-components.github.io/react-native/'}
                         />
-                        <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/pxblue'} />
+                        <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/brightlayer-ui'} />
                         <OpenURLButton
                             title={'Design Pattern Source on GitHub'}
-                            url={'https://github.com/pxblue/react-native-design-patterns'}
+                            url={'https://github.com/brightlayer-ui/react-native-design-patterns'}
                         />
-                        <OpenURLButton title={'Release Roadmap'} url={'https://pxblue.github.io/roadmap'} />
+                        <OpenURLButton title={'Release Roadmap'} url={'https://brightlayer-ui.github.io/roadmap'} />
                         <OpenURLButton
                             title={'Send Feedback or Suggestions'}
-                            url={'https://pxblue.github.io/community/contactus'}
+                            url={'https://brightlayer-ui.github.io/community/contactus'}
                         />
                     </ScrollView>
                 </SafeAreaView>
