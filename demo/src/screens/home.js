@@ -102,7 +102,10 @@ const Home = ({ navigation }) => {
                         title={'React Native Getting Started Guide'}
                         url={'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'}
                     />
-                    <OpenURLButton title={'Design Pattern Descriptions'} url={'https://brightlayer-ui.github.io/patterns'} />
+                    <OpenURLButton
+                        title={'Design Pattern Descriptions'}
+                        url={'https://brightlayer-ui.github.io/patterns'}
+                    />
                     <OpenURLButton
                         title={'React Native Component Library'}
                         url={'https://brightlayer-ui-components.github.io/react-native/'}

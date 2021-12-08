@@ -125,7 +125,10 @@ const App = (): JSX.Element => {
                             Edit <Body1 style={defaultStyles.bold}>App.tsx</Body1> and save to reload.
                         </Body1>
                         <Divider style={defaultStyles.divider} />
-                        <OpenURLButton title={'Brightlayer UI Documentation'} url={'https://brightlayer-ui.github.io/'} />
+                        <OpenURLButton
+                            title={'Brightlayer UI Documentation'}
+                            url={'https://brightlayer-ui.github.io/'}
+                        />
                         <OpenURLButton
                             title={'React Native Getting Started Guide'}
                             url={'https://brightlayer-ui.github.io/development/frameworks-mobile/react-native'}
