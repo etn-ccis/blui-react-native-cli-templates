@@ -8,11 +8,11 @@
 import React from 'react';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import * as PXBThemes from '@pxblue/react-native-themes';
+import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
 import { MainRouter } from './src/navigation';
 
 export const App = () => (
-    <ThemeProvider theme={PXBThemes.blue}>
+    <ThemeProvider theme={BLUIThemes.blue}>
         <SafeAreaProvider>
             <MainRouter />
         </SafeAreaProvider>

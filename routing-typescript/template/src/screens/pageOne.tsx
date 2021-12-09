@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, ViewStyle } from 'react-native';
-import { EmptyState, Header, IconFamily } from '@pxblue/react-native-components';
+import { EmptyState, Header, IconFamily } from '@brightlayer-ui/react-native-components';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
 const Event: IconFamily = { name: 'event', direction: 'rtl' };

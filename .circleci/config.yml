@@ -39,27 +39,27 @@ jobs:
                   echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
                   echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
             - run:
-                name: Publish @pxblue/react-native-template-blank
+                name: Publish @brightlayer-ui/react-native-template-blank
                 command: |
                   cd blank && yarn publish:package -b $CIRCLE_BRANCH
             - run:
-                name: Publish @pxblue/react-native-template-blank-typescript
+                name: Publish @brightlayer-ui/react-native-template-blank-typescript
                 command: |
                   cd blank-typescript && yarn publish:package -b $CIRCLE_BRANCH
             - run:
-                name: Publish @pxblue/react-native-template-routing
+                name: Publish @brightlayer-ui/react-native-template-routing
                 command: |
                   cd routing && yarn publish:package -b $CIRCLE_BRANCH
             - run:
-                name: Publish @pxblue/react-native-template-routing-typescript
+                name: Publish @brightlayer-ui/react-native-template-routing-typescript
                 command: |
                   cd routing-typescript && yarn publish:package -b $CIRCLE_BRANCH
             - run:
-                name: Publish @pxblue/react-native-template-authentication
+                name: Publish @brightlayer-ui/react-native-template-authentication
                 command: |
                   cd authentication && yarn publish:package -b $CIRCLE_BRANCH
             - run:
-                name: Publish @pxblue/react-native-template-authentication-typescript
+                name: Publish @brightlayer-ui/react-native-template-authentication-typescript
                 command: |
                   cd authentication-typescript && yarn publish:package -b $CIRCLE_BRANCH
 
@@ -70,29 +70,29 @@ jobs:
             - checkout
             - gh/setup
             - run:
-                name: Tag @pxblue/react-native-template-blank
+                name: Tag @brightlayer-ui/react-native-template-blank
                 command: |
-                  cd blank && yarn tag:package -b $CIRCLE_BRANCH
+                  cd blank && yarn tag:package -b $CIRCLE_BRANCH -s -blui-blank
             - run:
-                name: Tag @pxblue/react-native-template-blank-typescript
+                name: Tag @brightlayer-ui/react-native-template-blank-typescript
                 command: |
-                  cd blank-typescript && yarn tag:package -b $CIRCLE_BRANCH
+                  cd blank-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -blui-blank-typescription
             - run:
-                name: Tag @pxblue/react-native-template-routing
+                name: Tag @brightlayer-ui/react-native-template-routing
                 command: |
-                  cd routing && yarn tag:package -b $CIRCLE_BRANCH
+                  cd routing && yarn tag:package -b $CIRCLE_BRANCH -s -blui-routing
             - run:
-                name: Tag @pxblue/react-native-template-routing-typescript
+                name: Tag @brightlayer-ui/react-native-template-routing-typescript
                 command: |
-                  cd routing-typescript && yarn tag:package -b $CIRCLE_BRANCH
+                  cd routing-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -blui-routing-typescript
             - run:
-                name: Tag @pxblue/react-native-template-authentication
+                name: Tag @brightlayer-ui/react-native-template-authentication
                 command: |
-                  cd authentication && yarn tag:package -b $CIRCLE_BRANCH
+                  cd authentication && yarn tag:package -b $CIRCLE_BRANCH -s -blui-authentication
             - run:
-                name: Tag @pxblue/react-native-template-authentication-typescript
+                name: Tag @brightlayer-ui/react-native-template-authentication-typescript
                 command: |
-                  cd authentication-typescript && yarn tag:package -b $CIRCLE_BRANCH
+                  cd authentication-typescript && yarn tag:package -b $CIRCLE_BRANCH -s -blui-authentication-typescript
 
 workflows:
     version: 2

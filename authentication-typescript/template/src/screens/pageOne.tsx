@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, ViewStyle } from 'react-native';
-import { EmptyState, Header, IconFamily, InfoListItemProps, UserMenu } from '@pxblue/react-native-components';
+import { EmptyState, Header, IconFamily, InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
 import { Avatar } from 'react-native-paper';
 import { LocalStorage } from '../store/local-storage';
-import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
-import * as Colors from '@pxblue/colors';
+import { useSecurityActions } from '@brightlayer-ui/react-native-auth-workflow';
+import * as Colors from '@brightlayer-ui/colors';
 
 const Event: IconFamily = { name: 'event', direction: 'rtl' };
 const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };

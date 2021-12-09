@@ -8,7 +8,7 @@
 import React from 'react';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import * as PXBThemes from '@pxblue/react-native-themes';
+import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
 import { MainRouter } from './src/navigation';
 import { ProjectAuthUIActions } from './src/actions/AuthUIActions';
 import { ProjectRegistrationUIActions } from './src/actions/RegistrationUIActions';
@@ -17,7 +17,7 @@ import {
     AuthNavigationContainer,
     AuthUIContextProvider,
     useSecurityActions,
-} from '@pxblue/react-native-auth-workflow';
+} from '@brightlayer-ui/react-native-auth-workflow';
 import { useLinking } from '@react-navigation/native';
 import { authLinkMapping, resolveInitialState } from './src/navigation/DeepLinking';
 
@@ -48,7 +48,7 @@ export const App = (): JSX.Element => {
     }, [getInitialState]);
 
     return (
-        <ThemeProvider theme={PXBThemes.blue}>
+        <ThemeProvider theme={BLUIThemes.blue}>
             <SafeAreaProvider>
                 <SecurityContextProvider>
                     <AuthUIConfiguration>
