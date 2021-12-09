@@ -35,7 +35,7 @@ The Authentication template includes everything from the Routing template and al
 You can use these templates with the Brightlayer UI CLI (recommended):
 
 ```sh
-npx -p @brightlayer-ui/cli pxb new react-native --cli=rnc --template=blank
-npx -p @brightlayer-ui/cli pxb new react-native --cli=rnc --template=routing
-npx -p @brightlayer-ui/cli pxb new react-native --cli=rnc --template=authentication
+npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=blank
+npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=routing
+npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=authentication
 ```

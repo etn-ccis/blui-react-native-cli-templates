@@ -39,7 +39,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     return (
         <Drawer activeItem={selected} onItemSelect={(id: string): void => selectItem(id)}>
             <DrawerHeader
-                title={'PX Blue'}
+                title={'Brightlayer UI'}
                 subtitle={'React Native Project'}
                 fontColor={Colors.white[50]}
                 icon={{ name: 'menu' }}
