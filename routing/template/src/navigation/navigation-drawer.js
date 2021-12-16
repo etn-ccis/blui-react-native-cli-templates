@@ -1,6 +1,6 @@
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup } from '@pxblue/react-native-components';
+import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup } from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 export const navGroupItems = [
     {
@@ -33,7 +33,7 @@ export const NavigationDrawer = ({ navigation }) => {
     return (
         <Drawer activeItem={selected} onItemSelect={(id) => selectItem(id)}>
             <DrawerHeader
-                title={'PX Blue'}
+                title={'Brightlayer UI'}
                 subtitle={'React Native Project'}
                 fontColor={Colors.white[50]}
                 icon={{ name: 'menu' }}

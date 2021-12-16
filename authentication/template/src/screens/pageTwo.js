@@ -1,10 +1,10 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import { EmptyState, Header, UserMenu } from '@pxblue/react-native-components';
-import { useSecurityActions } from '@pxblue/react-native-auth-workflow';
+import { EmptyState, Header, UserMenu } from '@brightlayer-ui/react-native-components';
+import { useSecurityActions } from '@brightlayer-ui/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
 import { Avatar } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 const Event = { name: 'event', direction: 'rtl' };
 const MenuIcon = { name: 'menu', direction: 'ltr' };

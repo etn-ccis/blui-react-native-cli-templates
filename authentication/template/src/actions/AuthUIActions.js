@@ -1,4 +1,4 @@
-import { AuthUIActions } from '@pxblue/react-native-auth-workflow';
+import { AuthUIActions } from '@brightlayer-ui/react-native-auth-workflow';
 import { LocalStorage } from '../store/local-storage';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
