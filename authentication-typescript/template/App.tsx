@@ -44,7 +44,7 @@ export const App = (): JSX.Element => {
     const { getInitialState } = useLinking(ref, authLinkMapping);
     const [initialState, setInitialState] = React.useState();
     React.useEffect(() => {
-        resolveInitialState(getInitialState, setInitialState);
+        resolveInitialState(getInitialState as () => any, setInitialState as (state: any) => void);
     }, [getInitialState]);
 
     return (
