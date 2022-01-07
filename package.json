@@ -27,18 +27,18 @@
         "precommit": "cd demo && bash ./scripts/buildBlank.sh && cd .. && yarn lint && yarn prettier"
     },
     "dependencies": {
-        "react": "16.13.1"
+        "react": "17.0.2"
     },
     "devDependencies": {
         "@brightlayer-ui/eslint-config": "^2.0.5",
         "@brightlayer-ui/prettier-config": "^1.0.3",
-        "@react-native-community/eslint-config": "^1.1.0",
-        "@typescript-eslint/eslint-plugin": "^4.5.0",
-        "@typescript-eslint/parser": "^4.5.0",
-        "eslint": "^7.11.0",
-        "eslint-config-prettier": "^6.13.0",
-        "eslint-plugin-react": "^7.0.0",
-        "typescript": "^3.8.3"
+        "@react-native-community/eslint-config": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^5.9.0",
+        "@typescript-eslint/parser": "^5.9.0",
+        "eslint": "^8.6.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-react": "^7.28.0",
+        "typescript": "^4.5.4"
     },
     "prettier": "@brightlayer-ui/prettier-config"
 }
