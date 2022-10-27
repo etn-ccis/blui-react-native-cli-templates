@@ -2,10 +2,10 @@
     "dependencies": [
         "@brightlayer-ui/colors@^3.0.1",
         "@brightlayer-ui/icons-svg@^1.8.0",
-        "@brightlayer-ui/react-native-auth-workflow@^4.0.0",
-        "@brightlayer-ui/react-native-components@^6.0.1",
+        "@brightlayer-ui/react-native-auth-workflow@5.0.0-alpha.5",
+        "@brightlayer-ui/react-native-components@^7.0.0",
         "@brightlayer-ui/react-native-themes@^6.0.0",
-        "@brightlayer-ui/react-native-vector-icons@^1.4.0",
+        "@brightlayer-ui/react-native-vector-icons@^2.0.0",
         "@react-native-async-storage/async-storage@^1.14.1",
         "@react-native-community/masked-view@^0.1.10",
         "@react-navigation/drawer@^5.12.3",
@@ -19,13 +19,13 @@
         "react-native-modal@^12.0.2",
         "react-native-pager-view@^5.0.0",
         "react-native-paper@^4.7.2",
-        "react-native-reanimated@^1.0.0",
+        "react-native-reanimated@^2.0.0",
         "react-native-safe-area-context@^3.2.0",
         "react-native-screens@^3.0.0",
         "react-native-svg@^12.1.0",
         "react-native-svg-transformer@^0.14.3",
-        "react-native-vector-icons@^8.1.0",
-        "react-native-webview@^10.3.2"
+        "react-native-vector-icons@^9.2.0",
+        "react-native-webview@^11.23.1"
     ],
     "devDependencies": ["jest-transform-stub"]
 }
