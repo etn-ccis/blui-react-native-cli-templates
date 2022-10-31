@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.0 (November 1, 2022)
+
+### Changed
+
+-   Update to build with React Native 0.70.
+
 ## v2.0.0 (December 16, 2021)
 
 ### Changed
