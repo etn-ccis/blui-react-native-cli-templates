@@ -141,10 +141,10 @@ const App = (): JSX.Element => {
                             title={'React Native Component Library'}
                             url={'https://brightlayer-ui-components.github.io/react-native/'}
                         />
-                        <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/brightlayer-ui'} />
+                        <OpenURLButton title={'Visit Us on GitHub'} url={'https://github.com/etn-ccis?q=blui'} />
                         <OpenURLButton
                             title={'Design Pattern Source on GitHub'}
-                            url={'https://github.com/brightlayer-ui/react-native-design-patterns'}
+                            url={'https://github.com/etn-ccis/blui-react-native-design-patterns'}
                         />
                         <OpenURLButton title={'Release Roadmap'} url={'https://brightlayer-ui.github.io/roadmap'} />
                         <OpenURLButton
