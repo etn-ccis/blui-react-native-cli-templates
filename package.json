@@ -27,7 +27,7 @@
     "devDependencies": {
         "@brightlayer-ui/eslint-config": "^2.0.5",
         "@brightlayer-ui/prettier-config": "^1.0.3",
-        "@react-native-community/eslint-config": "^1.1.0",
+        "@react-native-community/eslint-config": "^3.0.0",
         "@typescript-eslint/eslint-plugin": "^4.33.0",
         "@typescript-eslint/parser": "^4.5.0",
         "eslint": "^7.32.0",
