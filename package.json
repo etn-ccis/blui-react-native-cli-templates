@@ -29,7 +29,7 @@
         "@brightlayer-ui/prettier-config": "^1.0.3",
         "@react-native-community/eslint-config": "^1.1.0",
         "@typescript-eslint/eslint-plugin": "^4.33.0",
-        "@typescript-eslint/parser": "^4.5.0",
+        "@typescript-eslint/parser": "^4.33.0",
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-react": "^7.33.1",
