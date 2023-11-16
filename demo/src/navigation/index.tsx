@@ -30,7 +30,7 @@ export const MainRouter = (): any => (
         <Drawer.Navigator
             initialRouteName="Home"
             screenOptions={{
-                headerShown: false
+                headerShown: false,
             }}
             drawerContent={(props): ReactNode => <CustomDrawerContent {...props} />}
         >
