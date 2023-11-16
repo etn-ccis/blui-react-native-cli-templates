@@ -3,6 +3,7 @@ import React, { useState, useCallback } from 'react';
 import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
+import { DrawerActions } from '@react-navigation/native';
 
 export const navGroupItems: NavItem[] = [
     {
@@ -29,7 +30,7 @@ export type NavDrawerProps = {
 export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     const [selected, setSelected] = useState('Home');
     const selectItem = useCallback(
-        (id) => {
+        (id: any) => {
             navigation.navigate(id);
             setSelected(id);
         },
@@ -44,7 +45,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 fontColor={Colors.white[50]}
                 icon={{ name: 'menu' }}
                 onIconPress={(): void => {
-                    navigation.closeDrawer();
+                    navigation.dispatch(DrawerActions.closeDrawer());
                 }}
             />
             <DrawerBody>
