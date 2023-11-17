@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { View } from 'react-native';
@@ -30,13 +30,9 @@ export const MainRouter = (): any => (
         <Drawer.Navigator
             initialRouteName="Home"
             screenOptions={{
-                drawerStyle: {
-                    backgroundColor: 'transparent',
-                    width: 300,
-                    maxWidth: '80%',
-                },
+                headerShown: false,
             }}
-            drawerContent={(props): ReactNode => <CustomDrawerContent {...props} />}
+            drawerContent={(props: any): ReactNode => <CustomDrawerContent {...props} />}
         >
             <RootStack.Screen name="Home" component={Home} />
             <RootStack.Screen name="PageOne" component={PageOne} />
