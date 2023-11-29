@@ -1,6 +1,6 @@
 {
     "name": "@brightlayer-ui/react-native-template-routing-typescript",
-    "version": "2.1.0",
+    "version": "2.2.0-alpha.0",
     "author": "brightlayer-ui <brightlayer-ui@eaton.com>",
     "keywords": [
         "react native",
