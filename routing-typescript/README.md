@@ -25,3 +25,20 @@ Projects created using this template will start out with the following file stru
     |── index.tsx                     // sets up routing
     └── navigation-drawer.tsx         // sets up Drawer
 ```
+
+## Clear Metro bundler cache (recommended)
+
+Run the command into the root of the created project.
+```sh
+yarn start --reset-cache
+```
+
+### Android
+This template supports the latest version of the react-native-reanimated package, which needs to reinstall the NDK module from Android Studio. You can do this via Android Studio: Go to Tools -> SDK Manager -> SDK Tools. And Reinstall or install `23.1.7779620` NDK version.
+
+### iOS
+
+Make sure to install pods first before running the app.
+```sh
+cd ios && pod install && cd ..
+```
