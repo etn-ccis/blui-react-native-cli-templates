@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2.0 (December 6, 2023)
+
+### Changed
+
+-   Update dependency package list to support latest `@react-native-reanimated` package.
+
 ## v2.1.0 (November 1, 2022)
 
 ### Changed

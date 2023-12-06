@@ -32,7 +32,7 @@ export const MainRouter = (): any => (
             screenOptions={{
                 headerShown: false,
             }}
-            drawerContent={(props: any): ReactNode => <CustomDrawerContent {...props} />}
+            drawerContent={(props): ReactNode => <CustomDrawerContent {...props} />}
         >
             <RootStack.Screen name="Home" component={Home} />
             <RootStack.Screen name="PageOne" component={PageOne} />

@@ -11,7 +11,7 @@
     "description": "A template with pre-configured login workflow and routing for React Native projects created with the Brightlayer UI CLI.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/brightlayer-ui/react-native-cli-templates.git"
+        "url": "https://github.com/etn-ccis/blui-react-native-cli-templates.git"
     },
     "scripts": {
         "publish:package": "set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
@@ -22,6 +22,6 @@
         "node": ">=10"
     },
     "bugs": {
-        "url": "https://github.com/brightlayer-ui/react-native-cli-templates/issues"
+        "url": "https://github.com/etn-ccis/blui-react-native-cli-templates/issues"
     }
 }

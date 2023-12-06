@@ -1,0 +1,27 @@
+name: Tagging
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  CURRENT_BRANCH: ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag-blank-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd blank-typescript && yarn tag:package -b ${CURRENT_BRANCH} -s -blui-blank-typescript
+  tag-routing-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd routing-typescript && yarn tag:package -b ${CURRENT_BRANCH} -s -blui-routing-typescript
+  tag-authentication-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd authentication-typescript && yarn tag:package -b ${CURRENT_BRANCH} -s -blui-authentication-typescript
