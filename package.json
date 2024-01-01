@@ -22,7 +22,7 @@
         "generate:licenses": "npm-license-crawler -onlyDirectDependencies -json LICENSES.json"
     },
     "dependencies": {
-        "react": "16.13.1"
+        "react": "18.2.0"
     },
     "devDependencies": {
         "@brightlayer-ui/eslint-config": "^2.0.5",
