@@ -1,0 +1,9 @@
+{
+  "name": "routing-template",
+  "version": "1.0.0",
+  "description": "routing template for blui",
+  "files": [
+    "template",
+    "template.config.js"
+  ]
+}
