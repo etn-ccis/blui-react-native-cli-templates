@@ -1,4 +1,4 @@
 module.exports = {
-    placeholderName: 'WorkflowTemplate',
+    placeholderName: 'blankTemplate',
     templateDir: './template',
     }
