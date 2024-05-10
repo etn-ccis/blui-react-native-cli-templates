@@ -1,9 +1,0 @@
-{
-  "name": "workflow-template",
-  "version": "1.0.0",
-  "description": "auth workflow template for blui",
-  "files": [
-    "template",
-    "template.config.js"
-  ]
-}

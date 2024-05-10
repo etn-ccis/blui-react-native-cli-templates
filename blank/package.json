@@ -1,9 +1,0 @@
-{
-  "name": "blank-template",
-  "version": "1.0.0",
-  "description": "blank template for blui",
-  "files": [
-    "template",
-    "template.config.js"
-  ]
-}
