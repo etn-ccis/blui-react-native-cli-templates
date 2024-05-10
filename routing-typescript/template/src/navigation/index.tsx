@@ -27,6 +27,8 @@ const MainRouter = (): ReactNode => (
             initialRouteName="Home"
             screenOptions={{
                 headerShown: false,
+                drawerType: 'front',
+                drawerStyle: { backgroundColor: 'transparent' },
             }}
             drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
