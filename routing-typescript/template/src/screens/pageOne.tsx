@@ -1,10 +1,8 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, ViewStyle } from 'react-native';
-import { EmptyState, Header, IconFamily } from '@brightlayer-ui/react-native-components';
+import { EmptyState, Header } from '@brightlayer-ui/react-native-components';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation';
-const Event: IconFamily = { name: 'event', direction: 'rtl' };
-const MenuIcon: IconFamily = { name: 'menu', direction: 'ltr' };
 
 const styles = (): StyleSheet.NamedStyles<{
     content: ViewStyle;
@@ -32,7 +30,7 @@ const PageOne: React.FC<AppProps> = ({ navigation }): JSX.Element => {
         <>
             <Header
                 title={'Page One'}
-                icon={MenuIcon}
+                icon={{ name: 'menu' }}
                 onIconPress={(): void => {
                     navigation.openDrawer();
                 }}
@@ -40,7 +38,7 @@ const PageOne: React.FC<AppProps> = ({ navigation }): JSX.Element => {
             <SafeAreaView style={defaultStyles.content}>
                 <ScrollView contentContainerStyle={defaultStyles.scrollViewContent}>
                     <EmptyState
-                        icon={Event}
+                        icon={{ family: 'material', name: 'event', direction: 'ltr' }}
                         title={'Coming Soon'}
                         description={'Replace this page with your own content'}
                     />

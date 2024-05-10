@@ -42,10 +42,10 @@ The [Authentication template](https://www.npmjs.com/package/@brightlayer-ui/reac
 
 ## Usage
 
-You can use these templates with the Brightlayer UI CLI (recommended):
+To create a new project using the Template simply run (recommended):
 
 ```sh
-npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=blank-typescript
-npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=routing-typescript
-npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=authentication-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-blank-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-routing-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-authentication-typescript
 ```

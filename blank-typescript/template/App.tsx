@@ -16,16 +16,15 @@ import {
     View,
     Animated,
     Easing,
+    Image,
 } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Button, Divider, Provider as ThemeProvider, useTheme } from 'react-native-paper';
-import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
-import { Body1, Header, H4 } from '@brightlayer-ui/react-native-components';
-import { Theme } from 'react-native-paper/lib/typescript/types';
-import Logo from './assets/images/Logo.svg';
+import { Button, Divider, Text, Provider as ThemeProvider } from 'react-native-paper';
+import { ExtendedTheme, useExtendedTheme, blue } from '@brightlayer-ui/react-native-themes';
+import { Header } from '@brightlayer-ui/react-native-components';
 
 const styles = (
-    theme: Theme
+    theme: ExtendedTheme
 ): StyleSheet.NamedStyles<{
     content: ViewStyle;
     pxbLogoWrapper: ViewStyle;
@@ -63,14 +62,14 @@ const styles = (
             marginVertical: 24,
         },
         openURLButtonText: {
-            color: theme.colors.text,
+            color: theme.colors.primary,
             padding: 8,
         },
     });
 
 const OpenURLButton = (props: any): JSX.Element => {
     const { url, title } = props;
-    const theme = useTheme();
+    const theme = useExtendedTheme();
     const defaultStyles = styles(theme);
 
     const handlePress = useCallback(async () => {
@@ -89,7 +88,7 @@ const OpenURLButton = (props: any): JSX.Element => {
 };
 
 const App = (): JSX.Element => {
-    const theme = useTheme();
+    const theme = useExtendedTheme();
     const defaultStyles = styles(theme);
     const spinValue = new Animated.Value(0);
 
@@ -108,22 +107,30 @@ const App = (): JSX.Element => {
     });
 
     return (
-        <ThemeProvider theme={BLUIThemes.blue}>
+        <ThemeProvider theme={blue}>
             <SafeAreaProvider>
                 <Header title={'Brightlayer UI React Native'} />
                 <SafeAreaView style={defaultStyles.content}>
                     <ScrollView>
                         <View style={defaultStyles.pxbLogoWrapper}>
                             <Animated.View style={[defaultStyles.pxbLogo, { transform: [{ rotate: spin }] }]}>
-                                <Logo height={100} width={100} fill={'#007bc1'} />
+                                <Image source={require('./assets/images/Logo.png')} />
                             </Animated.View>
                         </View>
-                        <H4 style={defaultStyles.title}>
-                            Welcome to Brightlayer <H4 color={'primary'}>UI</H4>.
-                        </H4>
-                        <Body1 style={defaultStyles.subtitle}>
-                            Edit <Body1 style={defaultStyles.bold}>App.tsx</Body1> and save to reload.
-                        </Body1>
+                        <Text variant={'headlineLarge'} style={defaultStyles.title}>
+                            Welcome to Brightlayer{' '}
+                            <Text variant={'headlineLarge'} style={{ fontSize: 34, color: theme.colors.primary }}>
+                                UI
+                            </Text>
+                            .
+                        </Text>
+                        <Text variant={'bodyLarge'} style={defaultStyles.subtitle}>
+                            Edit{' '}
+                            <Text variant={'bodyLarge'} style={defaultStyles.bold}>
+                                App.tsx
+                            </Text>{' '}
+                            and save to reload.
+                        </Text>
                         <Divider style={defaultStyles.divider} />
                         <OpenURLButton
                             title={'Brightlayer UI Documentation'}

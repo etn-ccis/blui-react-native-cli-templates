@@ -2,41 +2,41 @@ import React, { ReactNode } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { View } from 'react-native';
+// Your Three Pages (replace with your actual page components)
+import Home from '../screens/home'; // Replace with your Home screen component path
+import PageOne from '../screens/pageOne'; // Replace with your PageOne screen component path
+import PageTwo from '../screens/pageTwo'; // Replace with your PageTwo screen component path
 import { NavigationDrawer } from './navigation-drawer';
-import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../screens/home';
-import PageOne from '../screens/pageOne';
-import PageTwo from '../screens/pageTwo';
 
 const Drawer = createDrawerNavigator();
 
+// Type definitions for navigation parameters (optional)
 export type RootStackParamList = {
     Home: undefined;
     PageOne: undefined;
     PageTwo: undefined;
-    NavigationDrawer: undefined;
 };
-
-const RootStack = createStackNavigator<RootStackParamList>();
-
 const CustomDrawerContent = (props: any): any => (
     <View style={{ height: '100%' }}>
         <NavigationDrawer {...props} />
     </View>
 );
-
-export const MainRouter = (): any => (
+const MainRouter = (): ReactNode => (
     <NavigationContainer>
         <Drawer.Navigator
             initialRouteName="Home"
             screenOptions={{
                 headerShown: false,
+                drawerType: 'front',
+                drawerStyle: { backgroundColor: 'transparent' },
             }}
-            drawerContent={(props: any): ReactNode => <CustomDrawerContent {...props} />}
+            drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
-            <RootStack.Screen name="Home" component={Home} />
-            <RootStack.Screen name="PageOne" component={PageOne} />
-            <RootStack.Screen name="PageTwo" component={PageTwo} />
+            <Drawer.Screen name="Home" component={Home} />
+            <Drawer.Screen name="PageOne" component={PageOne} />
+            <Drawer.Screen name="PageTwo" component={PageTwo} />
         </Drawer.Navigator>
     </NavigationContainer>
 );
+
+export default MainRouter;

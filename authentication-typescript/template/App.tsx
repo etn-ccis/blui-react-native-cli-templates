@@ -5,60 +5,98 @@
 
  This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
  **/
-import React from 'react';
+import 'react-native-gesture-handler';
+import React, { useEffect, useState } from 'react';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
 import { MainRouter } from './src/navigation';
-import { ProjectAuthUIActions } from './src/actions/AuthUIActions';
-import { ProjectRegistrationUIActions } from './src/actions/RegistrationUIActions';
-import {
-    SecurityContextProvider,
-    AuthNavigationContainer,
-    AuthUIContextProvider,
-    useSecurityActions,
-} from '@brightlayer-ui/react-native-auth-workflow';
-import { useLinking } from '@react-navigation/native';
-import { authLinkMapping, resolveInitialState } from './src/navigation/DeepLinking';
-
-export const AuthUIConfiguration: React.FC = (props) => {
-    const securityContextActions = useSecurityActions();
-    return (
-        <AuthUIContextProvider
-            authActions={ProjectAuthUIActions(securityContextActions)}
-            registrationActions={ProjectRegistrationUIActions}
-            showSelfRegistration={true}
-            allowDebugMode={true}
-            contactEmail={'something@email.com'}
-            contactPhone={'1-800-123-4567'}
-            contactPhoneLink={'1-800-123-4567'}
-            // projectImage={require('./src/assets/images/some_image.png')}
-        >
-            {props.children}
-        </AuthUIContextProvider>
-    );
-};
+import { ThemeContext, ThemeType } from './src/contexts/ThemeContext';
+import { blue, blueDark } from '@brightlayer-ui/react-native-themes';
+import i18nAppInstance from './translations/i18n';
+import { I18nextProvider, useTranslation } from 'react-i18next';
+import { AppContext, AppContextType } from './src/contexts/AppContextProvider';
+import { LocalStorage } from './src/store/local-storage';
+import { Spinner } from '@brightlayer-ui/react-native-auth-workflow';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { NativeModules, Platform } from 'react-native';
 
 export const App = (): JSX.Element => {
-    const ref = React.useRef(null);
-    const { getInitialState } = useLinking(ref, authLinkMapping);
-    const [initialState, setInitialState] = React.useState();
-    React.useEffect(() => {
-        resolveInitialState(getInitialState, setInitialState);
-    }, [getInitialState]);
+    const [theme, setTheme] = useState<ThemeType>('light');
+    const [language, setLanguage] = useState('en');
+    const [isAuthenticated, setAuthenticated] = useState<AppContextType['isAuthenticated']>(false);
+    const [loginData, setLoginData] = useState<AppContextType['loginData']>({
+        email: '',
+        rememberMe: false,
+    });
+    const [isLoading, setIsLoading] = useState(true);
+    const { i18n } = useTranslation();
+    const getLanguage = async (): Promise<void> => {
+        try {
+            const storedLanguage = await AsyncStorage.getItem('userLanguage');
+            if (storedLanguage !== null) {
+                setLanguage(storedLanguage);
+                void i18n.changeLanguage(storedLanguage);
+            } else {
+                const locale =
+                    Platform.OS === 'ios'
+                        ? NativeModules.SettingsManager.settings.AppleLocale
+                        : NativeModules.I18nManager.localeIdentifier;
+                setLanguage(locale?.substring(0, 2) || 'en');
+            }
+        } catch (error) {
+            console.error('Error getting language from Async Storage:', error);
+        }
+    };
+    // handle initialization of auth data on first load
+    useEffect(() => {
+        const initialize = async (): Promise<void> => {
+            try {
+                const userData = await LocalStorage.readAuthData();
+                setLoginData({ email: userData.rememberMeData.user, rememberMe: userData.rememberMeData.rememberMe });
+                setAuthenticated(Boolean(userData.userId));
+                await getLanguage();
+            } catch (e) {
+                // handle any error state, rejected promises, etc..
+            } finally {
+                setIsLoading(false);
+            }
+        };
+        // eslint-disable-next-line
+        initialize();
+        // eslint-disable-next-line
+    }, []);
 
-    return (
-        <ThemeProvider theme={BLUIThemes.blue}>
-            <SafeAreaProvider>
-                <SecurityContextProvider>
-                    <AuthUIConfiguration>
-                        <AuthNavigationContainer initialState={initialState} ref={ref}>
+    return isLoading ? (
+        <Spinner visible={isLoading} />
+    ) : (
+        <ThemeContext.Provider value={{ theme, setTheme }}>
+            <I18nextProvider i18n={i18nAppInstance}>
+                <AppContext.Provider
+                    value={{
+                        isAuthenticated,
+                        onUserAuthenticated: (userData): void => {
+                            setAuthenticated(true);
+                            setLoginData(userData);
+                        },
+                        // eslint-disable-next-line
+                        onUserNotAuthenticated: (userData): void => {
+                            setAuthenticated(false);
+                        },
+                        loginData,
+                        setLoginData,
+                        language,
+                        setLanguage,
+                        setAuthenticated,
+                    }}
+                >
+                    <ThemeProvider theme={theme === 'light' ? blue : blueDark}>
+                        <SafeAreaProvider>
                             <MainRouter />
-                        </AuthNavigationContainer>
-                    </AuthUIConfiguration>
-                </SecurityContextProvider>
-            </SafeAreaProvider>
-        </ThemeProvider>
+                        </SafeAreaProvider>
+                    </ThemeProvider>
+                </AppContext.Provider>
+            </I18nextProvider>
+        </ThemeContext.Provider>
     );
 };
 
