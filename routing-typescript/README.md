@@ -8,7 +8,7 @@ This template includes the installation and initial setup of routing using [Reac
 ## Usage
 To create a new project using the Routing Template simply run :
 ```sh
-npx react-native init MyApp --template @brightlayer-ui/react-native-template-blank-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-routing-typescript
 ```
 
 ## Project Structure
