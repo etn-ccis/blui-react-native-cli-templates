@@ -31,6 +31,7 @@ const MainRouter = (): ReactNode => (
                 drawerStyle: { backgroundColor: 'transparent' },
             }}
             drawerContent={(props) => <CustomDrawerContent {...props} />}
+            useLegacyImplementation={false}
         >
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="PageOne" component={PageOne} />

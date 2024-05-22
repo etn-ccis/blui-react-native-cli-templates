@@ -1191,10 +1191,10 @@
   resolved "https://registry.yarnpkg.com/@brightlayer-ui/prettier-config/-/prettier-config-1.0.3.tgz#e40a7ae7435c6fd5118acbf249080e0aa81e93af"
   integrity sha512-EYm3+V7Qd+oYEF+8FadsXAZqXryEHHbGnrV1BMp9selhABjceqUqXPVE4Sn3SKWQdBNJ3En2A3EzgrzRbvRTaw==
 
-"@brightlayer-ui/react-native-auth-workflow@6.0.0-alpha.2":
-  version "6.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-auth-workflow/-/react-native-auth-workflow-6.0.0-alpha.2.tgz#c7dbad553f784a803a1221d981a5f25a1b787650"
-  integrity sha512-adcGDW+9Z+ST01gPy36U6DXfJEp4RXKV/ldrdkMuMBZghqgWwYc0woMuwVtJY2daaG91VsT8hWftNRiehdDiuw==
+"@brightlayer-ui/react-native-auth-workflow@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-auth-workflow/-/react-native-auth-workflow-6.0.0.tgz#c47908851deefb12024dd40549fb1d0874d941ef"
+  integrity sha512-bS00LNOQytAxVFuSMnx5dLynhVbtwLCaBOqKC0K6AHfSkzhwqv8/J9+cNmJKoZTxBgJlTNYo452obMgC/YAMzQ==
   dependencies:
     color "^4.2.3"
     lodash.clonedeep "^4.5.0"
@@ -4866,6 +4866,11 @@ jest-snapshot@^29.7.0:
     natural-compare "^1.4.0"
     pretty-format "^29.7.0"
     semver "^7.5.3"
+
+jest-transform-stub@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jest-transform-stub/-/jest-transform-stub-2.0.0.tgz#19018b0851f7568972147a5d60074b55f0225a7d"
+  integrity sha512-lspHaCRx/mBbnm3h4uMMS3R5aZzMwyNpNIJLXj4cEsV0mIUtS4IjYJLSoyjRCtnxb6RIGJ4NL2quZzfIeNhbkg==
 
 jest-util@^29.7.0:
   version "29.7.0"
