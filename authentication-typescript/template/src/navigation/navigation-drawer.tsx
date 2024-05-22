@@ -1,4 +1,4 @@
-import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup, NavItem } from '@brightlayer-ui/react-native-components';
+import { Drawer, DrawerBody, DrawerHeader, DrawerNavGroup } from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback, useEffect } from 'react';
 import { RootStackParamList } from './index';
 import { DrawerActions } from '@react-navigation/native';
@@ -14,9 +14,11 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     const [selected, setSelected] = useState('Home');
     const { t } = useTranslation();
     const navigationState = navigation.getState();
+
     const Homepage: IconFamily = { family: 'material', name: 'home', direction: 'ltr' };
     const Dashboard: IconFamily = { family: 'material', name: 'dashboard', direction: 'ltr' };
     const Notifications: IconFamily = { family: 'material', name: 'notifications', direction: 'ltr' };
+
     const selectItem = useCallback(
         (id: any) => {
             navigation.navigate(id);
@@ -25,23 +27,26 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
         [navigation]
     );
 
-    const navGroupItems: NavItem[] = [
-        {
-            title: `${t('TOOLBAR_MENU.HOME_PAGE')}`,
-            itemID: 'Homepage',
-            icon: Homepage,
-        },
-        {
-            title: `${t('DRAWER_MENU.DASHBOARD')}`,
-            itemID: 'Dashboard',
-            icon: Dashboard,
-        },
-        {
-            title: `${t('DRAWER_MENU.LOCATIONS')}`,
-            itemID: 'Locations',
-            icon: Notifications,
-        },
-    ];
+    const navGroupItems = React.useMemo(
+        () => [
+            {
+                title: `${t('TOOLBAR_MENU.HOME_PAGE')}`,
+                itemID: 'Homepage',
+                icon: Homepage,
+            },
+            {
+                title: `${t('DRAWER_MENU.DASHBOARD')}`,
+                itemID: 'Dashboard',
+                icon: Dashboard,
+            },
+            {
+                title: `${t('DRAWER_MENU.LOCATIONS')}`,
+                itemID: 'Locations',
+                icon: Notifications,
+            },
+        ], // eslint-disable-next-line react-hooks/exhaustive-deps
+        []
+    );
 
     useEffect(() => {
         const id = navGroupItems[navigationState.index]?.itemID;
