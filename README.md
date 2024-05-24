@@ -2,7 +2,7 @@
 
 # React Native CLI Templates
 
-These are project templates that are used by the React native CLi when starting a new Brightlayer UI project. They are used behind the scenes by the React native CLI.
+These are project templates that are used by the React Native CLi when starting a new Brightlayer UI project. They are used behind the scenes by the React Native CLI.
 
 ## Available Templates
 
