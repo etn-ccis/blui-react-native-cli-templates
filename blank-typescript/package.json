@@ -9,7 +9,7 @@
         "Brightlayer UI",
         "cli"
     ],
-    "description": "The base template for React Native projects created with the Brightlayer UI CLI.",
+    "description": "The base template for React Native projects created with the React Native CLI.",
     "repository": {
         "type": "git",
         "url": "https://github.com/etn-ccis/blui-react-native-cli-templates.git"
