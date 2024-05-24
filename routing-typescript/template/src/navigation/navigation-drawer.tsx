@@ -41,7 +41,6 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
             <DrawerHeader
                 title={'Brightlayer UI'}
                 subtitle={'React Native Project'}
-                // fontColor={}
                 icon={{ name: 'menu' }}
                 onIconPress={(): void => {
                     navigation.dispatch(DrawerActions.closeDrawer());
