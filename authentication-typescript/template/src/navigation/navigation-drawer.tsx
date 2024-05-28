@@ -45,7 +45,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 icon: Notifications,
             },
         ], // eslint-disable-next-line react-hooks/exhaustive-deps
-        []
+        [t]
     );
 
     useEffect(() => {
