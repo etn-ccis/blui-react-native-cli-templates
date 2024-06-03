@@ -57,3 +57,8 @@ cd ..
 yarn android/ios
 ```
 Once you have tested make sure to delete Node modules, Pods and build folder for both android and ios
+
+to check the template is working with react native cli 
+```sh
+npx react-native init myapp --template file:///the-path-to-location/blui-react-native-cli-templates/blank-typescript
+```
