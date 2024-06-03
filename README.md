@@ -50,7 +50,7 @@ npx react-native init MyApp --template @brightlayer-ui/react-native-template-aut
 ## Testing
 to test a template go inside the template folder and run command
 ```sh
-cd template-name/template
+cd <template-name>/template
 yarn install
 cd ios && pod install
 cd ..
