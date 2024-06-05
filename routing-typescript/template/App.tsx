@@ -10,8 +10,7 @@ import React from 'react';
 import { Provider as ThemeProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
-import { MainRouter } from './src/navigation';
-
+import MainRouter from './src/navigation';
 export const App = (): JSX.Element => (
     <ThemeProvider theme={BLUIThemes.blue}>
         <SafeAreaProvider>

@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.0.0 (June 5, 2024)
+
+### Changed
+
+-   Update to build with React Native 0.73.
+-   Updated the templates to use React Native CLI
+
 ## v2.1.0 (November 1, 2022)
 
 ### Changed

@@ -1,6 +1,8 @@
+[![Build](https://github.com/etn-ccis/blui-react-native-cli-templates/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-react-native-cli-templates/actions/workflows/blui-ci.yml)
+
 # React Native CLI Templates
 
-These are project templates that are used by the [Brightlayer UI CLI](https://github.com/etn-ccis/blui-cli) when starting a new Brightlayer UI project. They are used behind the scenes by the Brightlayer UI CLI.
+These are project templates that are used by the React Native CLI when starting a new Brightlayer UI project.
 
 ## Available Templates
 
@@ -25,27 +27,38 @@ The [Authentication template](https://www.npmjs.com/package/@brightlayer-ui/reac
 ## Screenshots
 
 ##### Blank Template
-
-![Blank Template](./images/blank-typescript-ios.png)
+<img width="400" alt="blank typescript" src="./images/blank-typescript-ios.png">
 
 ##### Routing Template With Collapsed Drawer
-
-![Routing Template](./images/routing-typescript-ios.png)
+<img width="400" alt="blank typescript" src="./images/routing-typescript-ios.png">
 
 ##### Routing Template With Expanded Drawer
-
-![Routing Template](./images/routing-typescript-ios-expanded-drawer.png)
+<img width="400" alt="blank typescript" src="./images/routing-typescript-ios-expanded-drawer.png">
 
 ##### Authentication Template Login Page
-
-![Authentication Template](./images/authentication-typescript-ios.png)
+<img width="400" alt="blank typescript" src="./images/authentication-typescript-ios.png">
 
 ## Usage
 
-You can use these templates with the Brightlayer UI CLI (recommended):
+To create a new project using the Template simply run (recommended):
 
 ```sh
-npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=blank-typescript
-npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=routing-typescript
-npx -p @brightlayer-ui/cli blui new react-native --cli=rnc --template=authentication-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-blank-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-routing-typescript
+npx react-native init MyApp --template @brightlayer-ui/react-native-template-authentication-typescript
+```
+## Testing
+to test a template go inside the template folder and run command
+```sh
+cd <template-name>/template
+yarn install
+cd ios && pod install
+cd ..
+yarn android/ios
+```
+Once you have tested make sure to delete Node modules, Pods and build folder for both android and ios
+
+to check the template is working with react native cli 
+```sh
+npx react-native init myapp --template file:///the-path-to-location/blui-react-native-cli-templates/blank-typescript
 ```
