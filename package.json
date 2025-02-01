@@ -24,7 +24,7 @@
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-react": "^7.37.2",
         "npm-license-crawler": "^0.2.1",
-        "prettier": "^3.2.5",
+        "prettier": "^3.4.2",
         "typescript": "5.7.2"
     },
     "prettier": "@brightlayer-ui/prettier-config"
