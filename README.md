@@ -1,5 +1,9 @@
 [![Build](https://github.com/etn-ccis/blui-react-native-cli-templates/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-react-native-cli-templates/actions/workflows/blui-ci.yml)
 
+> **Important Migration Notice:**
+>
+> This repository has been migrated to a monorepo to consolidate All the React Native libraries developed by Brightlayer Team into a single workspace. Future development and updates will now occur in the following location: [https://github.com/etn-ccis/blui-react-native/tree/dev/packages/cli-templates]. Please update your bookmarks and contribute to the monorepo for the latest changes.
+
 # React Native CLI Templates
 
 These are project templates that are used by the React Native CLI when starting a new Brightlayer UI project.
@@ -62,7 +66,3 @@ to check the template is working with react native cli
 ```sh
 npx react-native init myapp --template file:///the-path-to-location/blui-react-native-cli-templates/blank-typescript
 ```
-
-> **Important Migration Notice:**
->
-> This repository has been migrated to a monorepo to consolidate All the React Native libraries developed by Brightlayer Team into a single workspace. Future development and updates will now occur in the following location: [https://github.com/etn-ccis/blui-react-native/tree/dev/packages/cli-templates]. Please update your bookmarks and contribute to the monorepo for the latest changes.
